@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@android:color/holo_blue_dark"
+        android:background="#3F51B5"
         android:orientation="horizontal">
 
         <TextView
@@ -22,7 +22,7 @@
             android:layout_weight="8"
             android:gravity="center_vertical|center"
             android:text="约厨"
-            android:textColor="?android:attr/colorActivatedHighlight"
+            android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
         <ImageButton
@@ -30,7 +30,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@mipmap/ic_launcher" />
+            android:background="#3F51B5"
+            android:scaleType="centerCrop"
+            android:src="@drawable/news" />
     </LinearLayout>
 
 
@@ -46,10 +48,16 @@
             android:layout_weight="8"
             android:orientation="vertical">
 
-            <ImageSwitcher
-                android:id="@+id/imageSwitcher"
-                android:layout_width="match_parent"
-                android:layout_height="180dp"></ImageSwitcher>
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="180dp">
+
+                <ImageSwitcher
+                    android:id="@+id/imageSwitcher"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"></ImageSwitcher>
+
+            </FrameLayout>
 
             <LinearLayout
                 android:id="@+id/function"
@@ -68,14 +76,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher_background" />
+                        android:scaleType="centerCrop"
+                        android:background="#F9B653"
+                        android:layout_margin="1dp"
+                        android:src="@drawable/hot" />
 
                     <ImageButton
                         android:id="@+id/imagebtn_weather"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher_background" />
+                        android:scaleType="centerCrop"
+                        android:background="#F9B653"
+                        android:layout_margin="1dp"
+                        android:src="@drawable/weather" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -89,27 +103,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher_background" />
+                        android:scaleType="centerCrop"
+                        android:background="#F9B653"
+                        android:layout_margin="1dp"
+                        android:src="@drawable/location" />
 
                     <ImageButton
                         android:id="@+id/imagebtn_nutrition"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher_background" />
+                        android:scaleType="centerCrop"
+                        android:background="#F9B653"
+                        android:layout_margin="1dp"
+                        android:src="@drawable/nutrition" />
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/text1"
                 android:layout_width="match_parent"
-                android:layout_height="20dp">
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:id="@+id/tv_everyday"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
+                    android:background="@android:color/transparent"
                     android:text="每日推送" />
 
                 <TextView
@@ -117,6 +139,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@android:color/transparent"
                     android:text="更多>" />
             </LinearLayout>
 
@@ -137,14 +160,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher_background" />
+                        android:layout_margin="1dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img1" />
 
                     <ImageButton
                         android:id="@+id/imagebtn_every_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher_background" />
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img2" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -157,28 +186,36 @@
                         android:id="@+id/imagebtn_every_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher_background" />
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img3" />
 
                     <ImageButton
                         android:id="@+id/imagebtn_every_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher_background" />
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img1" />
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/text2"
                 android:layout_width="match_parent"
-                android:layout_height="20dp">
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:id="@+id/tv_like"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
+                    android:background="@android:color/transparent"
                     android:text="猜你喜欢" />
 
                 <TextView
@@ -186,6 +223,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@android:color/transparent"
                     android:text="更多>" />
             </LinearLayout>
 
@@ -206,14 +244,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher_background" />
+                        android:layout_margin="1dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img3" />
 
                     <ImageButton
                         android:id="@+id/imagebtn_like_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher_background" />
+                        android:layout_margin="1dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img1" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -227,14 +271,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher_background" />
+                        android:layout_margin="1dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img1" />
 
                     <ImageButton
                         android:id="@+id/imagebtn_like_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_launcher_background" />
+                        android:layout_margin="1dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img3" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -243,45 +293,61 @@
     <LinearLayout
         android:id="@+id/Bottom"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="30dp"
         android:layout_alignParentBottom="true"
         android:layout_weight="1"
+
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_index"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:layout_weight="1"
-            android:text="首页" />
+            android:background="#5677FC"
+            android:shadowColor="@android:color/darker_gray"
+            android:text="首页"
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/btn_search"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:layout_weight="1"
-            android:text="搜索" />
+            android:background="#5677FC"
+            android:text="搜索"
+            android:textColor="#FFFFFF" />
 
         <ImageButton
             android:id="@+id/imagebtn_camera"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/ic_launcher_background" />
+            android:layout_weight="1.5"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/camera" />
 
         <Button
             android:id="@+id/btn_date"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:layout_weight="1"
-            android:text="约厨" />
+            android:background="#5677FC"
+            android:text="约厨"
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/btn_mine"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:layout_weight="1"
-            android:text="我的" />
+            android:background="#5677FC"
+            android:text="我的"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
 </LinearLayout>

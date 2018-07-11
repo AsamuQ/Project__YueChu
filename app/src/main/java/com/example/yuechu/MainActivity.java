@@ -1,23 +1,55 @@
 package com.example.yuechu;
 
 import android.app.Activity;
+import android.media.ImageWriter;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ViewSwitcher;
+import android.view.ViewGroup.LayoutParams;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnTouchListener{
     private ImageSwitcher imageSwitcher;
     private int x=0;
     private int index=0;
     private int[] images;
+    private float downX;                        //按下点的X坐标
+    private boolean isSlip=false;
 
 
-    private Handler handler = new Handler();
+    Handler handler=new Handler(){
+        @Override
+        public void handleMessage(Message msg){
+            if(msg.what==111){
+                imageSwitcher.setImageResource(images[msg.arg1]);
+                imageSwitcher.setInAnimation(AnimationUtils.loadAnimation(MainActivity.this, android.R.anim.fade_in));
+                imageSwitcher.setOutAnimation(AnimationUtils.loadAnimation(MainActivity.this, android.R.anim.fade_out));
+
+            }
+            else if (msg.what==112){
+                imageSwitcher.setImageResource(images[msg.arg1]);
+                imageSwitcher.setInAnimation(AnimationUtils.loadAnimation(MainActivity.this,R.anim.left_in));
+                imageSwitcher.setOutAnimation(AnimationUtils.loadAnimation(getApplication(), R.anim.right_out));
+            }
+            else if (msg.what==113){
+                imageSwitcher.setImageResource(images[msg.arg1]);
+                imageSwitcher.setInAnimation(AnimationUtils.loadAnimation(getApplication(), R.anim.right_in));
+                imageSwitcher.setOutAnimation(AnimationUtils.loadAnimation(getApplication(), R.anim.left_out));
+            }
+        }
+    };
+
+
+    private void init(){
+        imageSwitcher = (ImageSwitcher)findViewById(R.id.imageSwitcher);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,29 +70,79 @@ public class MainActivity extends Activity {
                 return imageView;
             }
         });
+        imageSwitcher.setOnTouchListener(this);
         images = new int[]{
                 R.drawable.img1,
                 R.drawable.img2,
                 R.drawable.img3
         };
 
-
-        handler.postDelayed(new Runnable() {
+        Runnable r=new Runnable() {
             @Override
             public void run() {
-                imageSwitcher.setImageResource(images[index++]);
-                imageSwitcher.setInAnimation(AnimationUtils.loadAnimation(MainActivity.this,android.R.anim.fade_in));
-                imageSwitcher.setOutAnimation(AnimationUtils.loadAnimation(MainActivity.this,android.R.anim.fade_out));
-                if (index>=images.length){
-                    index=0;
+                while (index <= images.length&&isSlip==false) {
+                    Message msg = new Message();
+                    msg.what = 111;
+                    msg.arg1 = index;
+                    handler.sendMessage(msg);
+                    index++;
+                    if (index >= images.length) {
+                        index = 0;
+                    }
+                    try {
+                        Thread.sleep(2000); //暂停2秒继续，try…catch省略
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
-                handler.postDelayed(this,2000);
             }
-        },2000);
+        };
+        new Thread(r).start();
+
 
     }
 
-    private void init(){
-        imageSwitcher = (ImageSwitcher)findViewById(R.id.imageSwitcher);
+
+    public boolean onTouch(View v, MotionEvent event) {//判断图片左右滑动
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:{
+                //手指按下的X坐标
+                downX = event.getX();
+                break;
+            }
+            case MotionEvent.ACTION_UP:{
+                float lastX = event.getX();
+                //抬起的时候的X坐标大于按下的时候就显示上一张图片
+                if(lastX > downX){
+                    if(index > 0){
+                        index -- ;
+                    }else{
+                        index=images.length - 1;
+                    }
+                    Message msg=new Message();
+                    msg.what=112;
+                    msg.arg1=index;
+                    handler.sendMessage(msg);
+                }
+
+                if(lastX < downX){
+                    if(index < images.length - 1){
+                        index ++ ;
+                    }else{
+                        index=0;
+                    }
+                    Message msg=new Message();
+                    msg.what=113;
+                    msg.arg1=index;
+                    handler.sendMessage(msg);
+                }
+            }
+
+            break;
+        }
+        return true;
     }
+
+
+
 }
