@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".IndexActivity">
 
     <LinearLayout
         android:id="@+id/Title"
@@ -55,7 +55,23 @@
                 <ImageSwitcher
                     android:id="@+id/imageSwitcher"
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"></ImageSwitcher>
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerCrop"></ImageSwitcher>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/viewGroup"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="30dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"></LinearLayout>
+                </RelativeLayout>
 
             </FrameLayout>
 
