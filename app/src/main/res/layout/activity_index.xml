@@ -7,33 +7,33 @@
     android:orientation="vertical"
     tools:context=".IndexActivity">
 
-    <LinearLayout
-        android:id="@+id/Title"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#3F51B5"
-        android:orientation="horizontal">
+    <!--<LinearLayout-->
+        <!--android:id="@+id/Title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="#3F51B5"-->
+        <!--android:orientation="horizontal">-->
 
-        <TextView
-            android:id="@+id/Text_title"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="8"
-            android:gravity="center_vertical|center"
-            android:text="约厨"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+        <!--<TextView-->
+            <!--android:id="@+id/Text_title"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="8"-->
+            <!--android:gravity="center_vertical|center"-->
+            <!--android:text="约厨"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:textSize="24sp" />-->
 
-        <ImageButton
-            android:id="@+id/imagebtn_news"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#3F51B5"
-            android:scaleType="centerCrop"
-            android:src="@drawable/news" />
-    </LinearLayout>
+        <!--<ImageButton-->
+            <!--android:id="@+id/imagebtn_news"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#3F51B5"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/news" />-->
+    <!--</LinearLayout>-->
 
 
     <ScrollView
@@ -306,64 +306,64 @@
         </LinearLayout>
     </ScrollView>
 
-    <LinearLayout
-        android:id="@+id/Bottom"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_weight="1"
+    <!--<LinearLayout-->
+        <!--android:id="@+id/Bottom"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_weight="1"-->
 
-        android:orientation="horizontal">
+        <!--android:orientation="horizontal">-->
 
-        <Button
-            android:id="@+id/btn_index"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:background="#5677FC"
-            android:shadowColor="@android:color/darker_gray"
-            android:text="首页"
-            android:textColor="#FFFFFF" />
+        <!--<Button-->
+            <!--android:id="@+id/btn_index"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#5677FC"-->
+            <!--android:shadowColor="@android:color/darker_gray"-->
+            <!--android:text="首页"-->
+            <!--android:textColor="#FFFFFF" />-->
 
-        <Button
-            android:id="@+id/btn_search"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:background="#5677FC"
-            android:text="搜索"
-            android:textColor="#FFFFFF" />
+        <!--<Button-->
+            <!--android:id="@+id/btn_search"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#5677FC"-->
+            <!--android:text="搜索"-->
+            <!--android:textColor="#FFFFFF" />-->
 
-        <ImageButton
-            android:id="@+id/imagebtn_camera"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.5"
-            android:background="@android:color/transparent"
-            android:scaleType="fitXY"
-            android:src="@drawable/camera" />
+        <!--<ImageButton-->
+            <!--android:id="@+id/imagebtn_camera"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1.5"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:src="@drawable/camera" />-->
 
-        <Button
-            android:id="@+id/btn_date"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:background="#5677FC"
-            android:text="约厨"
-            android:textColor="#FFFFFF" />
+        <!--<Button-->
+            <!--android:id="@+id/btn_date"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#5677FC"-->
+            <!--android:text="约厨"-->
+            <!--android:textColor="#FFFFFF" />-->
 
-        <Button
-            android:id="@+id/btn_mine"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:background="#5677FC"
-            android:text="我的"
-            android:textColor="#FFFFFF" />
-    </LinearLayout>
+        <!--<Button-->
+            <!--android:id="@+id/btn_mine"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#5677FC"-->
+            <!--android:text="我的"-->
+            <!--android:textColor="#FFFFFF" />-->
+    <!--</LinearLayout>-->
 
 </LinearLayout>
