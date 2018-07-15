@@ -1,12 +1,9 @@
 package com.example.yuechu;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -79,25 +76,5 @@ public class IndexActivity extends Activity implements RadioGroup.OnCheckedChang
         if(fg2 != null)fragmentTransaction.hide(fg2);
         if(fg3 != null)fragmentTransaction.hide(fg3);
         if(fg4 != null)fragmentTransaction.hide(fg4);
-    }
-
-    //监听返回事件
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if( keyCode == event.KEYCODE_BACK ){
-            new AlertDialog.Builder(this)
-                    .setTitle("提示")
-                    .setMessage("确定退出吗？")
-                    .setPositiveButton("确定",new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    })
-                    .setNegativeButton("取消", null)
-                    .show();
-        }
-        return false;
-
     }
 }

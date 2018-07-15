@@ -1,7 +1,6 @@
 package com.example.yuechu;
 
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -10,27 +9,17 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageButton;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.ViewSwitcher;
-
-import com.example.yuechu.Page_Index.Everyday_more_Activity;
 
 import org.jetbrains.annotations.Nullable;
 
 import static java.lang.Thread.sleep;
 
 public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,View.OnTouchListener {
-    private TextView tv_everyday_more;
-    private TextView tv_like_more;
-    private ImageButton imagebtn_hot;
-    private ImageButton imagebtn_weather;
-    private ImageButton imagebtn_location;
-    private ImageButton imagebtn_nutrition;
     private ImageSwitcher imageSwitcher;
     private LinearLayout linearLayout;
     private int x=0;
@@ -65,12 +54,6 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         final View view=inflater.inflate(R.layout.activity_index,null);
 
-        tv_everyday_more=(TextView)view.findViewById(R.id.tv_everyday_more);
-        tv_like_more=(TextView)view.findViewById(R.id.tv_like_more);
-        imagebtn_hot=(ImageButton)view.findViewById(R.id.imagebtn_hot);
-        imagebtn_weather=(ImageButton)view.findViewById(R.id.imagebtn_weather);
-        imagebtn_location=(ImageButton)view.findViewById(R.id.imagebtn_location);
-        imagebtn_nutrition=(ImageButton)view.findViewById(R.id.imagebtn_nutrition);
         imageSwitcher=(ImageSwitcher)view.findViewById(R.id.imageSwitcher);
         linearLayout=(LinearLayout)view.findViewById(R.id.viewGroup);
 
@@ -128,21 +111,6 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
                 }
             }
         }).start();
-
-        //点击跳转食谱浏览页面
-        View.OnClickListener listener=new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), Everyday_more_Activity.class));
-            }
-        };
-        tv_everyday_more.setOnClickListener(listener);
-        tv_like_more.setOnClickListener(listener);
-        imagebtn_hot.setOnClickListener(listener);
-        imagebtn_weather.setOnClickListener(listener);
-        imagebtn_location.setOnClickListener(listener);
-        imagebtn_nutrition.setOnClickListener(listener);
-
         return view;
     }
 
