@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.yuechu.R;
 import com.example.yuechu.data.Person;
 import com.example.yuechu.db.PersonDAO;
 import com.example.yuechu.login.LoginActivity;
