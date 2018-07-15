@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.yuechu.App;
 import com.example.yuechu.IndexActivity;
+import com.example.yuechu.R;
 import com.example.yuechu.data.Person;
 import com.example.yuechu.db.PersonDAO;
 import com.example.yuechu.register.RegisterActivity;
