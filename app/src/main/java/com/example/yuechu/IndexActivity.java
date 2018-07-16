@@ -92,6 +92,7 @@ public class IndexActivity extends Activity implements RadioGroup.OnCheckedChang
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             finish();
+                            System.exit(0);
                         }
                     })
                     .setNegativeButton("取消", null)

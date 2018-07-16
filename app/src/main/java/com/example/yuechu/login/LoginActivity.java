@@ -93,6 +93,7 @@ public class LoginActivity extends Activity {
 
             Intent intent = new Intent(getApplicationContext(),IndexActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 
