@@ -84,7 +84,7 @@ public class LoginActivity extends Activity {
             editor=pref.edit();
             if(rem.isChecked()){
                 editor.putBoolean("remember_password",true);
-                editor.putString("account",username);
+                editor.putString("username",username);
                 editor.putString("password",password);
             }else {
                 editor.clear();
