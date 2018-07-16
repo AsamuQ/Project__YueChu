@@ -1,7 +1,6 @@
 package com.example.yuechu.Page_Index;
 
 import android.content.Context;
-import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,7 +49,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(ViewHolder holder, final int position) {
         Recipe recipe = recipesList.get(position);
         Glide.with(context).load(recipe.getPortrait()).into(holder.imgPortrait);
-        //holder.imgPortrait.setImageURI(Uri.parse(recipe.getPortrait()));
         holder.tvName.setText(recipe.getName());
         holder.tvdes.setText(recipe.getDescription());
         if (listener!=null){

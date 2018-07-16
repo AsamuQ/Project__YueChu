@@ -6,11 +6,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.yuechu.R;
 import com.example.yuechu.Recipe;
@@ -26,14 +24,13 @@ public class Everyday_more_Activity extends Activity {
     private List<Recipe> recipesList;
     private RecyclerView recyclerView;
     private RecyclerViewAdapter adapter;
-    private LinearLayoutManager layoutManager;
+    private GridLayoutManager gridLayoutManager;
 
     private Handler handler=new Handler(){
         @Override
         public void handleMessage(Message msg) {
             if (msg.what==200) {
-                Toast.makeText(getApplicationContext(),""+msg.obj,Toast.LENGTH_SHORT).show();
-                recyclerView.setLayoutManager(layoutManager);
+                recyclerView.setLayoutManager(gridLayoutManager);
                 adapter = new RecyclerViewAdapter(recipesList,getApplicationContext());
 
                 if (recipesList!=null) {
@@ -59,9 +56,10 @@ public class Everyday_more_Activity extends Activity {
         setContentView(R.layout.everyday_more);
 
         recyclerView=findViewById(R.id.recyleview_everyday);
-        layoutManager=new LinearLayoutManager(this);
+        gridLayoutManager=new GridLayoutManager(this,2);
         recipesList=new ArrayList<>();
 
+        setTitle("每日推荐");
         getHttpData();
     }
 
@@ -75,15 +73,15 @@ public class Everyday_more_Activity extends Activity {
                     Elements titleLinks = doc.select("div.w5").select("ul.on").select("li");
                     //for循环遍历获取到每条新闻的四个数据并封装到News实体类中
                     for (int j = 0; j < titleLinks.size(); j++) {
-                        String imguri=titleLinks.get(j).select("a").attr("src");
+                        String imguri=titleLinks.get(j).select("img.imgLoad").attr("data-src");
                         String title = titleLinks.get(j).select("p").text();
                         String des = titleLinks.get(j).select("a.u").text();
-                        Recipe recipe=new Recipe(imguri,title,des);
+                        String url=titleLinks.get(j).select("a").attr("href");
+                        Recipe recipe=new Recipe(imguri,title,des,url);
                         recipesList.add(recipe);
                         System.out.println(recipe.getPortrait());
                     }
                     msg.what=200;
-                    msg.obj=recipesList.get(1).getPortrait();
                 }catch (Exception e){
                     e.printStackTrace();
                     msg.what=201;

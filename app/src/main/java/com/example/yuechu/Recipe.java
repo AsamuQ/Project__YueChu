@@ -6,11 +6,13 @@ public class Recipe implements Serializable {
     private String portrait;
     private String name;
     private String description;
+    private String url;
 
-    public Recipe(String  portrait,String name, String description ) {
+    public Recipe(String  portrait,String name, String description, String url) {
         this.portrait = portrait;
         this.name = name;
         this.description = description;
+        this.url=url;
     }
 
     public String getName() {
@@ -37,9 +39,11 @@ public class Recipe implements Serializable {
         this.portrait = portrait;
     }
 
-    public void add(Recipe recipe){
-        this.portrait=recipe.getPortrait();
-        this.name=recipe.getName();
-        this.description=recipe.getDescription();
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
