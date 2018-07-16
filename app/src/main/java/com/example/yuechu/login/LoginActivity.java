@@ -11,7 +11,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.yuechu.App;
 import com.example.yuechu.IndexActivity;
 import com.example.yuechu.R;
 import com.example.yuechu.data.Person;
@@ -92,11 +91,8 @@ public class LoginActivity extends Activity {
             }
             editor.apply();
 
-            Intent intent = new Intent(LoginActivity.this, IndexActivity.class);
+            Intent intent = new Intent(getApplicationContext(),IndexActivity.class);
             startActivity(intent);
-
-            App app = (App) getApplication();
-            app.setPerson(person);
         }
     }
 

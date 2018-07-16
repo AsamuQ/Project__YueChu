@@ -10,14 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".IndexActivity">
+
+        </activity>
+        <activity android:name=".Page_Index.Everyday_more_Activity" />
+        <activity android:name=".Page_Index.ItemDescriptionActivity"></activity>
+        <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Page_Index.Everyday_more_Activity" />
-        <activity android:name=".Page_Index.ItemDescriptionActivity"></activity>
+        <activity android:name=".register.RegisterActivity"></activity>
     </application>
 
 </manifest>
