@@ -1,20 +1,22 @@
 package com.example.yuechu.Page_Index;
 
-import android.content.Intent;
+import android.content.Context;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.yuechu.R;
 import com.example.yuechu.Recipe;
 
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> implements View.OnClickListener {
+    private Context context;
     private List<Recipe> recipesList;
     private OnRecyclerViewItemClickListener listener=null;
 
@@ -31,8 +33,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
     }
 
-    public RecyclerViewAdapter(List<Recipe> recipesList) {
+    public RecyclerViewAdapter(List<Recipe> recipesList,Context context) {
         this.recipesList = recipesList;
+        this.context=context;
     }
 
     @Override
@@ -46,7 +49,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         Recipe recipe = recipesList.get(position);
-        holder.imgPortrait.setImageResource(recipe.getPortrait());
+        Glide.with(context).load(recipe.getPortrait()).into(holder.imgPortrait);
+        //holder.imgPortrait.setImageURI(Uri.parse(recipe.getPortrait()));
         holder.tvName.setText(recipe.getName());
         holder.tvdes.setText(recipe.getDescription());
         if (listener!=null){

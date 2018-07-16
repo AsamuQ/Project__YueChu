@@ -8,12 +8,12 @@
 
     <ImageView
         android:id="@+id/imgPortrait"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+        android:layout_width="230px"
+        android:layout_height="230px" />
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
         android:orientation="vertical"
         android:paddingLeft="8dp">
@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#333333"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tvDes"

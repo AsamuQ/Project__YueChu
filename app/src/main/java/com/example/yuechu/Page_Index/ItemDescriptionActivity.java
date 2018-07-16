@@ -2,12 +2,19 @@ package com.example.yuechu.Page_Index;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.yuechu.R;
 import com.example.yuechu.Recipe;
+
+import java.net.URI;
+import java.net.URL;
 
 public class ItemDescriptionActivity extends Activity {
     private ImageView imageView_item;
@@ -24,7 +31,8 @@ public class ItemDescriptionActivity extends Activity {
         Bundle bundle=intent.getExtras();
         Recipe recipe= (Recipe) bundle.getSerializable("recipe");
 
-        imageView_item.setImageResource(recipe.getPortrait());
+        Glide.with(this).load(recipe.getPortrait()).into(imageView_item);
+        //imageView_item.setImageURI(Uri.parse(recipe.getPortrait()));
         tv_des_item.setText(recipe.getDescription());
     }
 }
