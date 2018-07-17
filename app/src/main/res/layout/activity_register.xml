@@ -7,7 +7,7 @@
     android:paddingLeft="48dp"
     android:paddingRight="48dp"
     android:orientation="vertical"
-    android:background="@mipmap/back"
+    android:background="@drawable/indexbg"
     android:alpha="0.8"
     tools:context=".login.LoginActivity">
 
