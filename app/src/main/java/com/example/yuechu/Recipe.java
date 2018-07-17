@@ -3,10 +3,10 @@ package com.example.yuechu;
 import java.io.Serializable;
 
 public class Recipe implements Serializable {
-    private String portrait;
-    private String name;
-    private String description;
-    private String url;
+    private String portrait;    //图片uri
+    private String name;        //食谱标题
+    private String description; //食谱描述
+    private String url;         //食谱页面
 
     public Recipe(String  portrait,String name, String description, String url) {
         this.portrait = portrait;

@@ -30,12 +30,15 @@ public class Everyday_more_Activity extends Activity {
         @Override
         public void handleMessage(Message msg) {
             if (msg.what==200) {
+                //将recyclerView设置为网格布局
                 recyclerView.setLayoutManager(gridLayoutManager);
+                //适配器adapter初始化，将数据(recipesList)填入适配器
                 adapter = new RecyclerViewAdapter(recipesList,getApplicationContext());
 
                 if (recipesList!=null) {
                     recyclerView.setAdapter(adapter);
                 }
+                //添加recyclerView中Item的点击时间，同时将点击的Item数据传出到指定Activity
                 adapter.setOnItemClickListenner(new RecyclerViewAdapter.OnRecyclerViewItemClickListener() {
                     @Override
                     public void myClick(View view, int position) {
@@ -79,12 +82,10 @@ public class Everyday_more_Activity extends Activity {
                         String url=titleLinks.get(j).select("a").attr("href");
                         Recipe recipe=new Recipe(imguri,title,des,url);
                         recipesList.add(recipe);
-                        System.out.println(recipe.getPortrait());
                     }
                     msg.what=200;
                 }catch (Exception e){
                     e.printStackTrace();
-                    msg.what=201;
                 }
                 handler.sendMessage(msg);
             }
