@@ -23,6 +23,7 @@ public class IndexActivity extends Activity implements RadioGroup.OnCheckedChang
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("约厨");
 
         fManager = getFragmentManager();
         rg_tab_bar = (RadioGroup) findViewById(R.id.rg_tab_bar);

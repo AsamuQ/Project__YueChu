@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@mipmap/back"
+    android:alpha="0.8"
     tools:context=".IndexActivity">
 
     <!--<LinearLayout-->
@@ -140,7 +142,11 @@
                 android:id="@+id/text1"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:padding="0dp">
 
                 <TextView
                     android:id="@+id/tv_everyday"
@@ -148,6 +154,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
                     android:background="@android:color/transparent"
+                    android:lines="@android:integer/config_mediumAnimTime"
                     android:text="每日推送" />
 
                 <TextView
@@ -159,17 +166,26 @@
                     android:text="更多>" />
             </LinearLayout>
 
-            <android.support.v7.widget.RecyclerView
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/item_every">
-            </android.support.v7.widget.RecyclerView>
+                android:layout_height="1dp"
+                android:background="#cc82e7">
+            </View>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/item_every"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:isScrollContainer="false"></android.support.v7.widget.RecyclerView>
 
             <LinearLayout
                 android:id="@+id/text2"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp">
 
                 <TextView
                     android:id="@+id/tv_like"
@@ -188,73 +204,19 @@
                     android:text="更多>" />
             </LinearLayout>
 
-                <android.support.v7.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/item_like">
-                </android.support.v7.widget.RecyclerView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#cc82e7">
+            </View>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_like">
+            </android.support.v7.widget.RecyclerView>
 
         </LinearLayout>
     </ScrollView>
-
-    <!--<LinearLayout-->
-        <!--android:id="@+id/Bottom"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="30dp"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_weight="1"-->
-
-        <!--android:orientation="horizontal">-->
-
-        <!--<Button-->
-            <!--android:id="@+id/btn_index"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="bottom"-->
-            <!--android:layout_weight="1"-->
-            <!--android:background="#5677FC"-->
-            <!--android:shadowColor="@android:color/darker_gray"-->
-            <!--android:text="首页"-->
-            <!--android:textColor="#FFFFFF" />-->
-
-        <!--<Button-->
-            <!--android:id="@+id/btn_search"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="bottom"-->
-            <!--android:layout_weight="1"-->
-            <!--android:background="#5677FC"-->
-            <!--android:text="搜索"-->
-            <!--android:textColor="#FFFFFF" />-->
-
-        <!--<ImageButton-->
-            <!--android:id="@+id/imagebtn_camera"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="1.5"-->
-            <!--android:background="@android:color/transparent"-->
-            <!--android:scaleType="fitXY"-->
-            <!--android:src="@drawable/camera" />-->
-
-        <!--<Button-->
-            <!--android:id="@+id/btn_date"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="bottom"-->
-            <!--android:layout_weight="1"-->
-            <!--android:background="#5677FC"-->
-            <!--android:text="约厨"-->
-            <!--android:textColor="#FFFFFF" />-->
-
-        <!--<Button-->
-            <!--android:id="@+id/btn_mine"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="bottom"-->
-            <!--android:layout_weight="1"-->
-            <!--android:background="#5677FC"-->
-            <!--android:text="我的"-->
-            <!--android:textColor="#FFFFFF" />-->
-    <!--</LinearLayout>-->
 
 </LinearLayout>

@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="left"
-            android:textColor="#333333"
+            android:textColor="@android:color/holo_blue_dark"
             android:textSize="18sp" />
 
         <TextView
@@ -32,10 +32,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:textColor="#888888"
+            android:textColor="@android:color/holo_blue_light"
             android:textSize="14sp" />
 
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="2dp"
+        android:background="#ed0"></View>
 
 
 </LinearLayout>

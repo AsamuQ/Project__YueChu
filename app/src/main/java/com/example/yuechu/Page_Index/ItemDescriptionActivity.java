@@ -47,8 +47,7 @@ public class ItemDescriptionActivity extends Activity {
             @Override
             public void handleMessage(Message msg) {
                 if (msg.what==100){
-                    tv_steps.setText((String)msg.obj);
-                    Toast.makeText(getApplicationContext(),(String)msg.obj,Toast.LENGTH_SHORT).show();
+                    tv_steps.setText("  "+(String)msg.obj);
                 }
             }
         };

@@ -3,6 +3,7 @@ package com.example.yuechu;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
