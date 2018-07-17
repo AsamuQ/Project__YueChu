@@ -22,7 +22,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".register.RegisterActivity" />
-        <activity android:name=".TestActivity"></activity>
     </application>
 
 </manifest>
