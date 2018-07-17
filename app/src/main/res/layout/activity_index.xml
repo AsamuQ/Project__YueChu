@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@mipmap/back"
-    android:alpha="0.8"
+    android:background="@drawable/indexbg"
+    android:scaleType="centerCrop"
     tools:context=".IndexActivity">
 
     <!--<LinearLayout-->
