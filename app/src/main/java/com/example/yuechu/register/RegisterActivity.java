@@ -56,12 +56,6 @@ public class RegisterActivity extends Activity {
         String username = etUsername.getText().toString();
         String password = etPassword.getText().toString();
 
-        if (TextUtils.isEmpty(username)) {
-            Toast.makeText(this, "用户名不能为空！", Toast.LENGTH_SHORT).show();
-        } else if (TextUtils.isEmpty(password)) {
-            Toast.makeText(this, "密码不能为空！", Toast.LENGTH_SHORT).show();
-        }
-
         // 先判断改用户信息是否已经被注册
         PersonDAO personDAO = new PersonDAO(this);
         Person person = personDAO.find(username);

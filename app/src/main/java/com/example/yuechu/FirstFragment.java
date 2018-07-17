@@ -3,7 +3,7 @@ package com.example.yuechu;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Paint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -22,14 +22,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
-import com.example.yuechu.Page_Index.Everyday_more_Activity;
+import com.example.yuechu.Page_Index.ItemView_Activity;
 import com.example.yuechu.Page_Index.ItemDescriptionActivity;
 import com.example.yuechu.Page_Index.RecyclerViewAdapter;
 
 import org.jetbrains.annotations.Nullable;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
@@ -121,7 +120,7 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
     }
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         final View view=inflater.inflate(R.layout.activity_index,null);
 
         tv_everyday_more=(TextView)view.findViewById(R.id.tv_everyday_more);
@@ -146,7 +145,7 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
             @Override
             public View makeView() {
                 ImageView imageView=new ImageView(getActivity());
-                imageView.setBackgroundColor(0xFFFFFFFF); //白色背景
+                imageView.setBackgroundColor(Color.TRANSPARENT);
                 imageView.setScaleType(ImageView.ScaleType.FIT_CENTER); //居中显示
                 imageView.setLayoutParams(new ImageSwitcher.LayoutParams(
                         ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -202,7 +201,30 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
         View.OnClickListener listener=new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), Everyday_more_Activity.class));
+                String url="";
+                String title="";
+                switch (v.getId()){
+                    case R.id.imagebtn_hot:
+                        url="https://home.meishichina.com/show-top-type-recipe.html";
+                        title="热门食谱";
+                        break;
+                    case R.id.imagebtn_weather:
+                        url="https://home.meishichina.com/show-top-type-recipe-order-quarter.html";
+                        title="节气食谱";
+                        break;
+                    case R.id.imagebtn_location:
+                        url="https://home.meishichina.com/show-top-type-recipe-order-star.html";
+                        title="当地食谱";
+                        break;
+                    case R.id.imagebtn_nutrition:
+                        url="https://home.meishichina.com/show-top-type-recipe-order-pop.html";
+                        title="营养食谱";
+                        break;
+                }
+                Intent intent=new Intent(getActivity(), ItemView_Activity.class);
+                intent.putExtra("url",url);
+                intent.putExtra("title",title);
+                startActivity(intent);
             }
         };
         tv_everyday_more.setOnClickListener(listener);

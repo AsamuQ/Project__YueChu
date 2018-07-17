@@ -54,6 +54,16 @@
                 android:layout_width="fill_parent"
                 android:layout_height="180dp">
 
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="80dp"
+                    android:text="介绍"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
                 <ImageSwitcher
                     android:id="@+id/imageSwitcher"
                     android:layout_width="fill_parent"
