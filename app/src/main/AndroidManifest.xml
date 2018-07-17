@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.yuechu">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,12 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".IndexActivity">
-        </activity>
-        <activity android:name=".Page_Index.Everyday_more_Activity">
-
-        </activity>
-        <activity android:name=".Page_Index.ItemDescriptionActivity"></activity>
+        <activity android:name=".IndexActivity"></activity>
+        <activity android:name=".Page_Index.Everyday_more_Activity"></activity>
+        <activity android:name=".Page_Index.ItemDescriptionActivity" />
         <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".register.RegisterActivity"></activity>
+        <activity android:name=".register.RegisterActivity" />
+        <activity android:name=".TestActivity"></activity>
     </application>
 
 </manifest>
