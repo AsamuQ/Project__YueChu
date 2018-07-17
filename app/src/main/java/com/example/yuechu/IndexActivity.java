@@ -40,6 +40,7 @@ public class IndexActivity extends Activity implements RadioGroup.OnCheckedChang
             case R.id.rb_channel:
                 if(fg1 == null){
                     fg1 = new FirstFragment();
+                    fg1.setContext(getApplicationContext());
                     fTransaction.add(R.id.ly_content,fg1);
                 }else{
                     fTransaction.show(fg1);

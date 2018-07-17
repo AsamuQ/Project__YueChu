@@ -1,10 +1,13 @@
 package com.example.yuechu;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,12 +22,22 @@ import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
 import com.example.yuechu.Page_Index.Everyday_more_Activity;
+import com.example.yuechu.Page_Index.ItemDescriptionActivity;
+import com.example.yuechu.Page_Index.RecyclerViewAdapter;
 
 import org.jetbrains.annotations.Nullable;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static java.lang.Thread.sleep;
 
 public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,View.OnTouchListener {
+    private Context context;
     private TextView tv_everyday_more;
     private TextView tv_like_more;
     private ImageButton imagebtn_hot;
@@ -33,11 +46,18 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
     private ImageButton imagebtn_nutrition;
     private ImageSwitcher imageSwitcher;
     private LinearLayout linearLayout;
-    private int x=0;
     private int currentPosition=0;
     private int[] images;                       //轮播图片
     private float downX;                        //按下点的X坐标
     private ImageView[] tips;                   //轮播图小圆点
+    private List<Recipe> recipesList;
+    private List<Recipe> recipesList2;
+    private RecyclerView recyclerView;
+    private RecyclerView recyclerView2;
+    private RecyclerViewAdapter adapter;
+    private RecyclerViewAdapter adapter2;
+    private GridLayoutManager gridLayoutManager;
+    private GridLayoutManager gridLayoutManager2;
 
     Handler handler=new Handler(){
         @Override
@@ -58,8 +78,46 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
                 imageSwitcher.setImageResource(images[msg.arg1]);
             }
             setImageBackground(msg.arg1);
+            if (msg.what==200){
+                //将recyclerView设置为网格布局
+                recyclerView.setLayoutManager(gridLayoutManager);
+                recyclerView2.setLayoutManager(gridLayoutManager2);
+                //适配器adapter初始化，将数据(recipesList)填入适配器
+                adapter = new RecyclerViewAdapter(recipesList,context);
+                adapter2= new RecyclerViewAdapter(recipesList2,context);
+
+                if (recipesList!=null) {
+                    recyclerView.setAdapter(adapter);
+                }
+                if (recipesList2!=null) {
+                    recyclerView2.setAdapter(adapter2);
+                }
+                //添加recyclerView中Item的点击时间，同时将点击的Item数据传出到指定Activity
+                adapter.setOnItemClickListenner(new RecyclerViewAdapter.OnRecyclerViewItemClickListener() {
+                    @Override
+                    public void myClick(View view, int position) {
+                        Recipe recipe = recipesList.get(position);
+                        Intent intent = new Intent(context, ItemDescriptionActivity.class);
+                        intent.putExtra("recipe", recipe);
+                        startActivity(intent);
+                    }
+                });
+                adapter2.setOnItemClickListenner(new RecyclerViewAdapter.OnRecyclerViewItemClickListener() {
+                    @Override
+                    public void myClick(View view, int position) {
+                        Recipe recipe = recipesList2.get(position);
+                        Intent intent = new Intent(context, ItemDescriptionActivity.class);
+                        intent.putExtra("recipe", recipe);
+                        startActivity(intent);
+                    }
+                });
+            }
         }
     };
+
+    public void setContext(Context context){
+        this.context=context;
+    }
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -73,6 +131,15 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
         imagebtn_nutrition=(ImageButton)view.findViewById(R.id.imagebtn_nutrition);
         imageSwitcher=(ImageSwitcher)view.findViewById(R.id.imageSwitcher);
         linearLayout=(LinearLayout)view.findViewById(R.id.viewGroup);
+
+        recyclerView=view.findViewById(R.id.item_every);
+        recyclerView2=view.findViewById(R.id.item_like);
+        gridLayoutManager=new GridLayoutManager(context,2);
+        gridLayoutManager2=new GridLayoutManager(context,2);
+        recipesList=new ArrayList<>();
+        recipesList2=new ArrayList<>();
+        //设置recyclerview条目
+        getHttpData();
 
         imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
             @Override
@@ -108,6 +175,7 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
 
         setImageBackground(currentPosition);
 
+        //轮播图线程
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -121,7 +189,7 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
                         currentPosition=0;
                     }
                     try{
-                        sleep(2000);
+                        sleep(3000);
                     }catch (InterruptedException e){
                         e.printStackTrace();
                     }
@@ -200,5 +268,38 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
         i.setScaleType(ImageView.ScaleType.CENTER_CROP);
         i.setLayoutParams(new ImageSwitcher.LayoutParams(RelativeLayout.LayoutParams.FILL_PARENT, RelativeLayout.LayoutParams.FILL_PARENT));
         return i ;
+    }
+
+    public void getHttpData(){
+        new Thread(new Runnable() {
+            Message msg=new Message();
+            @Override
+            public void run() {
+                try{
+                    Document doc= (Document) Jsoup.connect("https://www.meishichina.com/").get();
+                    Elements titleLinks = doc.select("div.w5").select("ul.on").select("li");
+                    for (int j = 0; j < 4; j++) {
+                        String imguri=titleLinks.get(j).select("img.imgLoad").attr("data-src");
+                        String title = titleLinks.get(j).select("p").text();
+                        String des = titleLinks.get(j).select("a.u").text();
+                        String url=titleLinks.get(j).select("a").attr("href");
+                        Recipe recipe=new Recipe(imguri,title,des,url);
+                        recipesList.add(recipe);
+                    }
+                    for (int j = 4; j < 8; j++) {
+                        String imguri=titleLinks.get(j).select("img.imgLoad").attr("data-src");
+                        String title = titleLinks.get(j).select("p").text();
+                        String des = titleLinks.get(j).select("a.u").text();
+                        String url=titleLinks.get(j).select("a").attr("href");
+                        Recipe recipe=new Recipe(imguri,title,des,url);
+                        recipesList2.add(recipe);
+                    }
+                    msg.what=200;
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                handler.sendMessage(msg);
+            }
+        }).start();
     }
 }
