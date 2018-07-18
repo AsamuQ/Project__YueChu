@@ -153,7 +153,7 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
                 return imageView;
             }
         });
-        images=new int[]{R.drawable.img1,R.drawable.img2,R.drawable.img3};
+        images=new int[]{R.drawable.lunbo_img1,R.drawable.lunbo_img2,R.drawable.lunbo_img3};
         imageSwitcher.setImageResource(images[0]);
         imageSwitcher.setOnTouchListener((View.OnTouchListener) this);
 
@@ -204,20 +204,27 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
                 String url="";
                 String title="";
                 switch (v.getId()){
+                    case R.id.tv_everyday_more:
+                        url="https://home.meishichina.com/show-top-type-recipe-page-";
+                        title="每日推荐";
+                        break;
                     case R.id.imagebtn_hot:
                         url="https://home.meishichina.com/show-top-type-recipe-page-";
                         title="热门食谱";
                         break;
+                    case R.id.tv_like_more:
+                        url="https://home.meishichina.com/show-top-type-recipe-order-quarter-page-";
+                        title="猜你喜欢";
                     case R.id.imagebtn_weather:
-                        url="https://home.meishichina.com/show-top-type-recipe-order-quarter.html";
+                        url="https://home.meishichina.com/show-top-type-recipe-order-quarter-page-";
                         title="节气食谱";
                         break;
                     case R.id.imagebtn_location:
-                        url="https://home.meishichina.com/show-top-type-recipe-order-star.html";
+                        url="https://home.meishichina.com/show-top-type-recipe-order-chef-page-";
                         title="当地食谱";
                         break;
                     case R.id.imagebtn_nutrition:
-                        url="https://www.meishichina.com/YuanLiao/gongxiao/bugai/1/";
+                        url="https://home.meishichina.com/show-top-type-recipe-order-star-page-";
                         title="营养食谱";
                         break;
                 }

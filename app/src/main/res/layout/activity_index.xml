@@ -9,39 +9,9 @@
     android:scaleType="centerCrop"
     tools:context=".IndexActivity">
 
-    <!--<LinearLayout-->
-        <!--android:id="@+id/Title"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="1"-->
-        <!--android:background="#3F51B5"-->
-        <!--android:orientation="horizontal">-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/Text_title"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_weight="8"-->
-            <!--android:gravity="center_vertical|center"-->
-            <!--android:text="约厨"-->
-            <!--android:textColor="#FFFFFF"-->
-            <!--android:textSize="24sp" />-->
-
-        <!--<ImageButton-->
-            <!--android:id="@+id/imagebtn_news"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="1"-->
-            <!--android:background="#3F51B5"-->
-            <!--android:scaleType="centerCrop"-->
-            <!--android:src="@drawable/news" />-->
-    <!--</LinearLayout>-->
-
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="8">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/Body"
@@ -51,8 +21,9 @@
             android:orientation="vertical">
 
             <FrameLayout
+                android:id="@+id/lunbo"
                 android:layout_width="fill_parent"
-                android:layout_height="180dp">
+                android:layout_height="150dp">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -68,6 +39,7 @@
                     android:id="@+id/imageSwitcher"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:layout_gravity="top"
                     android:scaleType="centerCrop"></ImageSwitcher>
 
                 <RelativeLayout
@@ -105,9 +77,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="7"
+                        android:background="@color/transparent"
                         android:scaleType="centerInside"
-                        android:src="@drawable/hot"
-                        android:background="@color/transparent"/>
+                        android:src="@drawable/hot" />
 
                     <TextView
                         android:id="@+id/textView2"
@@ -129,9 +101,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="7"
+                        android:background="@color/transparent"
                         android:scaleType="centerInside"
-                        android:src="@drawable/weather"
-                        android:background="@color/transparent"/>
+                        android:src="@drawable/weather" />
 
                     <TextView
                         android:id="@+id/textView3"
@@ -153,9 +125,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="7"
+                        android:background="@color/transparent"
                         android:scaleType="centerInside"
-                        android:src="@drawable/location"
-                        android:background="@color/transparent"/>
+                        android:src="@drawable/location" />
 
                     <TextView
                         android:id="@+id/textView4"
@@ -177,9 +149,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="7"
+                        android:background="@color/transparent"
                         android:scaleType="centerInside"
-                        android:src="@drawable/nutrition"
-                        android:background="@color/transparent"/>
+                        android:src="@drawable/nutrition" />
 
                     <TextView
                         android:id="@+id/textView5"
@@ -222,13 +194,12 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#cc82e7">
-            </View>
+                android:background="#cc82e7"></View>
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/item_every"
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="380dp"
                 android:isScrollContainer="false"></android.support.v7.widget.RecyclerView>
 
             <LinearLayout
@@ -260,14 +231,12 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#cc82e7">
-            </View>
+                android:background="#cc82e7"></View>
 
             <android.support.v7.widget.RecyclerView
+                android:id="@+id/item_like"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/item_like">
-            </android.support.v7.widget.RecyclerView>
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 
         </LinearLayout>
     </ScrollView>
