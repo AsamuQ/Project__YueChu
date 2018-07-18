@@ -9,6 +9,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 import com.example.yuechu.R;
 import com.example.yuechu.Recipe;
@@ -20,7 +22,7 @@ import org.jsoup.select.Elements;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Everyday_more_Activity extends Activity {
+public class ItemView_Activity extends Activity {
     private List<Recipe> recipesList;
     private RecyclerView recyclerView;
     private RecyclerViewAdapter adapter;
@@ -56,34 +58,36 @@ public class Everyday_more_Activity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.everyday_more);
+        setContentView(R.layout.item_view);
 
         recyclerView=findViewById(R.id.recyleview_everyday);
         gridLayoutManager=new GridLayoutManager(this,2);
         recipesList=new ArrayList<>();
 
-        setTitle("每日推荐");
-        getHttpData();
+        setTitle(getIntent().getExtras().getString("title"));
+        getHttpData(getIntent().getExtras().getString("url"));
     }
 
-    public void getHttpData(){
+    public void getHttpData(final String url){
         new Thread(new Runnable() {
             Message msg=new Message();
             @Override
             public void run() {
                 try{
-                    Document doc= (Document) Jsoup.connect("https://www.meishichina.com/").get();
-                    Elements titleLinks = doc.select("div.w5").select("ul.on").select("li");
-                    //for循环遍历获取到每条新闻的四个数据并封装到News实体类中
-                    for (int j = 0; j < titleLinks.size(); j++) {
+                    Document doc=(Document)Jsoup.connect(url).get();
+                    Elements titleLinks=doc.select("div.wrap").select("div.w.clear").select("div.space_left")
+                            .select("div#J_list.ui_newlist_1.get_num").select("ul").select("li");
+                    for (int j=0;j<titleLinks.size();j++){
                         String imguri=titleLinks.get(j).select("img.imgLoad").attr("data-src");
-                        String title = titleLinks.get(j).select("p").text();
-                        String des = titleLinks.get(j).select("a.u").text();
-                        String url=titleLinks.get(j).select("a").attr("href");
+                        String title = titleLinks.get(j).select("h2").select("a").text();
+                        String des = titleLinks.get(j).select("p.subline").select("a").text();
+                        String url=titleLinks.get(j).select("h2").select("a").attr("href");
                         Recipe recipe=new Recipe(imguri,title,des,url);
                         recipesList.add(recipe);
                     }
                     msg.what=200;
+                    msg.arg1=titleLinks.size();
+                    msg.obj=url;
                 }catch (Exception e){
                     e.printStackTrace();
                 }
