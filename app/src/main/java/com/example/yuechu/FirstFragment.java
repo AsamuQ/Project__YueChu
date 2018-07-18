@@ -19,6 +19,7 @@ import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
@@ -134,7 +135,13 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
 
         recyclerView=view.findViewById(R.id.item_every);
         recyclerView2=view.findViewById(R.id.item_like);
-        gridLayoutManager=new GridLayoutManager(context,2);
+        gridLayoutManager=new GridLayoutManager(context,2){
+            @Override
+            public boolean canScrollVertically() {
+                //禁止内部滑动
+                return false;
+            }
+        };
         gridLayoutManager2=new GridLayoutManager(context,2);
         recipesList=new ArrayList<>();
         recipesList2=new ArrayList<>();
@@ -242,6 +249,20 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
         imagebtn_nutrition.setOnClickListener(listener);
 
         return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, @android.support.annotation.Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+//        ((ScrollView)getView().findViewById(R.id.scollView)).scrollTo(0,0);
     }
 
     //设置小圆点状态

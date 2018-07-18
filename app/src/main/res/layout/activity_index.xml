@@ -5,11 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
     android:background="@drawable/indexbg_mid"
     android:scaleType="centerCrop"
     tools:context=".IndexActivity">
 
     <ScrollView
+        android:id="@+id/scollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
