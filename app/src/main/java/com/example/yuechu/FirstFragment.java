@@ -205,7 +205,7 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
                 String title="";
                 switch (v.getId()){
                     case R.id.imagebtn_hot:
-                        url="https://home.meishichina.com/show-top-type-recipe.html";
+                        url="https://home.meishichina.com/show-top-type-recipe-page-";
                         title="热门食谱";
                         break;
                     case R.id.imagebtn_weather:
@@ -217,7 +217,7 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
                         title="当地食谱";
                         break;
                     case R.id.imagebtn_nutrition:
-                        url="https://home.meishichina.com/show-top-type-recipe-order-pop.html";
+                        url="https://www.meishichina.com/YuanLiao/gongxiao/bugai/1/";
                         title="营养食谱";
                         break;
                 }

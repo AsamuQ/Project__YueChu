@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/refreshLayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/indexbg"
+app:srlPrimaryColor="#444444"
+app:srlAccentColor="@android:color/white"
+app:srlEnablePreviewInEditMode="true"
+layout_height="">
+<pl.droidsonroids.gif.GifImageView
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:scaleType="centerCrop"
+    android:src="@mipmap/gif_header_repast"/>
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/recyleview_everyday"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/indexbg">
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyleview_everyday"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/title_everyday" />
-</LinearLayout>
+    android:layout_above="@+id/title_everyday" />
+<com.scwang.smartrefresh.layout.footer.BallPulseFooter
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide;
 import com.example.yuechu.R;
 import com.example.yuechu.Recipe;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> implements View.OnClickListener {
@@ -32,8 +33,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
     }
 
-    public RecyclerViewAdapter(List<Recipe> recipesList,Context context) {
-        this.recipesList = recipesList;
+    public RecyclerViewAdapter(Context context) {
+        this.context=context;
+        recipesList=new ArrayList<>();
+    }
+
+    public RecyclerViewAdapter(List<Recipe> list,Context context) {
+        this.recipesList=list;
         this.context=context;
     }
 
@@ -67,6 +73,25 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public int getItemCount() {
         return recipesList.size();
+    }
+
+    public Recipe getRecipe(int position){return recipesList.get(position);}
+
+    //下拉刷新用
+    public void refreshRecipes(List<Recipe> list){
+        List<Recipe> newRecipe=new ArrayList<>();
+        for (Recipe r: list){
+            if (!this.recipesList.equals(r)){
+                newRecipe.add(r);
+            }
+        }
+        this.recipesList.addAll(0,newRecipe);
+        this.notifyDataSetChanged();
+    }
+    //上拉加载用
+    public void addRecipes(List<Recipe> list){
+        this.recipesList.addAll(list);
+        this.notifyDataSetChanged();
     }
 
 //    item点击处理
