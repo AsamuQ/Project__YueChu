@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".page_yuechu.xs3Activity">
+
+        <LinearLayout
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#3F51B5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Text_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:gravity="center_vertical|center"
+                android:background="@android:color/holo_blue_dark"
+                android:text="约厨"
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/ib"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/camera" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:background="@drawable/bj">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:text="悬赏内容"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editText2"
+                        android:layout_width="300dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textPersonName" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:text="悬赏奖励"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editText4"
+                        android:layout_width="300dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/bt1"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="left"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/Bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_index"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:text="首页" />
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:text="搜索" />
+
+            <ImageButton
+                android:id="@+id/imagebtn_camera"
+                android:layout_width="110dp"
+                android:layout_height="60dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/camera1" />
+
+            <Button
+                android:id="@+id/btn_date"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:background="@android:color/holo_blue_light"
+                android:textColor="#FFFFFF"
+                android:text="约厨" />
+
+            <Button
+                android:id="@+id/btn_mine"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="我的" />
+        </LinearLayout>
+
+    </LinearLayout>

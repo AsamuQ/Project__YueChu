@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".page_yuechu.phb2Activity"
+        android:background="@drawable/start">
+
+        <LinearLayout
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#3F51B5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Text_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:gravity="center_vertical|center"
+                android:background="@android:color/holo_blue_dark"
+                android:text="约厨"
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/ib"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/camera" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                //这里添加你的组件
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="190dp"
+                            android:layout_height="180dp"
+                            android:layout_weight="1"
+                            android:text="     小福贵"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="36sp" />
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/phb2" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="267dp"
+                        android:layout_weight="1"
+                        android:text='主人公是一个山村少年，洪家菜第18代传人 ，老蔡头的徒弟，洪老头的孙子。他聪明、调皮，重亲情，对爷爷极为孝顺。他从小跟爷爷学做菜，左手食指能够测出菜的味道，味道最佳时，手指能变成金黄色。他为了拿到御赐的金厨具，救出被捕的爷爷，大胆创新，将祖传的厨艺发挥到了巅峰!与老佛爷的妹妹的女儿小飞蝶以及光绪皇帝结下深厚友谊，打败了前首席御膳大厨冷面，拿到18把金厨具。'
+                        android:textColor="@android:color/background_light"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/Bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_index"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:text="首页" />
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:text="搜索" />
+
+            <ImageButton
+                android:id="@+id/imagebtn_camera"
+                android:layout_width="110dp"
+                android:layout_height="60dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/camera1" />
+
+            <Button
+                android:id="@+id/btn_date"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:background="@android:color/holo_blue_light"
+                android:textColor="#FFFFFF"
+                android:text="约厨" />
+
+            <Button
+                android:id="@+id/btn_mine"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="我的" />
+        </LinearLayout>
+    </LinearLayout>
