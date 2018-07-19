@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -16,7 +17,8 @@ public class IndexActivity extends Activity implements RadioGroup.OnCheckedChang
 
     //Fragment Object
     private FirstFragment fg1;
-    private MyFragment fg2,fg3,fg4;
+    private ThirdFragment fg3;
+    private MyFragment fg2,fg4;
     private FragmentManager fManager;
 
     @Override
@@ -57,7 +59,8 @@ public class IndexActivity extends Activity implements RadioGroup.OnCheckedChang
                 break;
             case R.id.rb_better:
                 if(fg3 == null){
-                    fg3 = new MyFragment("第三个Fragment");
+                    fg3 = new ThirdFragment();
+                    fg3.setContext(getApplicationContext());
                     fTransaction.add(R.id.ly_content,fg3);
                 }else{
                     fTransaction.show(fg3);

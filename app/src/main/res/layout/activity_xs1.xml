@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".page_yuechu.xs1Activity">
+
+    <RelativeLayout
+        android:id="@+id/ly_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/indexbg_top"
+        android:scaleType="centerCrop">
+
+        <TextView
+            android:id="@+id/txt_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="约厨"
+            android:textColor="@color/text_topbar"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/div_white" />
+
+    </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/indexbg_mid"
+            android:layout_weight="8">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/la1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    //这里添加你的组件
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:src="@drawable/jb1" />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="麻婆豆腐怎么做才好吃"
+                        android:textSize="30sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/la2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    //这里添加你的组件
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/jb2" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="口味虾的做法"
+                        android:textSize="30sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/la3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    //这里添加你的组件
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/jb4" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="武汉热干面的做法"
+                        android:textSize="30sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/la4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    //这里添加你的组件
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/jb2" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="广西的桂林米粉怎么做"
+                        android:textSize="30sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/la5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    //这里添加你的组件
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/jb1" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="醒酒汤的做法"
+                        android:textSize="30sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/la6"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    //这里添加你的组件
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/jb1" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="适合饭前吃的小吃"
+                        android:textSize="30sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/la7"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    //这里添加你的组件
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/jb4" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="好吃不腻的甜点"
+                        android:textSize="30sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/la8"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    //这里添加你的组件
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/jb2" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="减肥时该吃什么"
+                        android:textSize="30sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/la9"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    //这里添加你的组件
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/jb1" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="蛋挞的做法"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+</LinearLayout>
