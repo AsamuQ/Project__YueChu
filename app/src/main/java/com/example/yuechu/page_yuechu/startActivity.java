@@ -9,7 +9,9 @@ import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 
+import com.example.yuechu.IndexActivity;
 import com.example.yuechu.R;
+import com.example.yuechu.login.LoginActivity;
 
 public class startActivity extends Activity {
 
@@ -60,7 +62,7 @@ public class startActivity extends Activity {
     }
 
     private void start() {
-        Intent intent = new Intent(startActivity.this, ycActivity.class);
+        Intent intent = new Intent(startActivity.this, LoginActivity.class);
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         finish();

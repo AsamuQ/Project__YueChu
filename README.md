@@ -1,6 +1,9 @@
 # 约厨
 2018年暑假Android实训项目
 
+## 功能介绍
+    可以用于记录美食的照片/视频，存入数据库并可以进行播放实现，包括菜品的做法的基本实现。
+
 ## 目录结构
 ```c
     ┠--  login        // 登录
@@ -10,6 +13,12 @@
     ┠--  data         // 事物抽象对象类包
     ┠--  db           // 数据库操作包
 ```
+
+## 应用截图
+![image](https://github.com/Asamu/Project_YueChu/appPicture/login.png)
+![image](https://github.com/Asamu/Project_YueChu/appPicture/index.png)
+![image](https://github.com/Asamu/Project_YueChu/appPicture/ItemView.png)
+![image](https://github.com/Asamu/Project_YueChu/appPicture/login.png)
 
 ## 团队成员
 [Asamu](https://github.com/AsamuQ)    

@@ -21,15 +21,15 @@
         <activity android:name=".Page_Index.ItemView_Activity"/>
         <activity android:name=".Page_Index.ItemDescriptionActivity" />
         <activity android:name=".login.LoginActivity">
+
+        </activity>
+        <activity android:name=".register.RegisterActivity" />
+        <activity android:name=".page_yuechu.startActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".register.RegisterActivity" />
-        <activity android:name=".page_yuechu.startActivity">
-
         </activity>
         <activity android:name=".page_yuechu.ycActivity" />
         <activity android:name=".page_yuechu.phbActivity" />
