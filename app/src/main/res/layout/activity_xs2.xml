@@ -259,47 +259,4 @@
         </ScrollView>
 
 
-        <LinearLayout
-            android:id="@+id/Bottom"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_alignParentBottom="true"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_index"
-                android:layout_width="70dp"
-                android:layout_height="60dp"
-                android:text="首页" />
-
-            <Button
-                android:id="@+id/btn_search"
-                android:layout_width="70dp"
-                android:layout_height="60dp"
-                android:text="搜索" />
-
-            <ImageButton
-                android:id="@+id/imagebtn_camera"
-                android:layout_width="110dp"
-                android:layout_height="60dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/camera1" />
-
-            <Button
-                android:id="@+id/btn_date"
-                android:layout_width="70dp"
-                android:layout_height="60dp"
-                android:background="@android:color/holo_blue_light"
-                android:textColor="#FFFFFF"
-                android:text="约厨" />
-
-            <Button
-                android:id="@+id/btn_mine"
-                android:layout_width="70dp"
-                android:layout_height="60dp"
-                android:layout_weight="1"
-                android:text="我的" />
-        </LinearLayout>
-
-    </LinearLayout>
+</LinearLayout>
