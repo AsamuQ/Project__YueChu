@@ -15,10 +15,10 @@
 ```
 
 ## 应用截图
-![image](https://github.com/Asamu/Project_YueChu/appPicture/login.png)
-![image](https://github.com/Asamu/Project_YueChu/appPicture/index.png)
-![image](https://github.com/Asamu/Project_YueChu/appPicture/ItemView.png)
-![image](https://github.com/Asamu/Project_YueChu/appPicture/login.png)
+![image](https://github.com/AsamuQ/Project_YueChu/appPicture/login.png)
+![image](https://github.com/AsamuQ/Project_YueChu/appPicture/index.png)
+![image](https://github.com/AsamuQ/Project_YueChu/appPicture/ItemView.png)
+![image](https://github.com/AsamuQ/Project_YueChu/appPicture/login.png)
 
 ## 团队成员
 [Asamu](https://github.com/AsamuQ)    
