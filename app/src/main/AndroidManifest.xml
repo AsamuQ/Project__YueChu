@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".IndexActivity"></activity>
-        <activity android:name=".Page_Index.ItemView_Activity"></activity>
+        <activity android:name=".IndexActivity"/>
+        <activity android:name=".Page_Index.ItemView_Activity"/>
         <activity android:name=".Page_Index.ItemDescriptionActivity" />
         <activity android:name=".login.LoginActivity">
             <intent-filter>

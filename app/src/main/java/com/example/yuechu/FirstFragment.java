@@ -19,7 +19,6 @@ import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
@@ -222,6 +221,7 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
                     case R.id.tv_like_more:
                         url="https://home.meishichina.com/show-top-type-recipe-order-quarter-page-";
                         title="猜你喜欢";
+                        break;
                     case R.id.imagebtn_weather:
                         url="https://home.meishichina.com/show-top-type-recipe-order-quarter-page-";
                         title="节气食谱";
@@ -249,20 +249,6 @@ public class FirstFragment extends Fragment implements ViewSwitcher.ViewFactory,
         imagebtn_nutrition.setOnClickListener(listener);
 
         return view;
-    }
-
-    @Override
-    public void onViewCreated(View view, @android.support.annotation.Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
-//        ((ScrollView)getView().findViewById(R.id.scollView)).scrollTo(0,0);
     }
 
     //设置小圆点状态
