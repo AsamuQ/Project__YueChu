@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="16dp">
+    android:layout_height="45dp"
+    android:minHeight="45dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/indexbg_top"
+    app:titleTextAppearance="@style/Toolbar">
 
     <TextView
+        android:id="@+id/txt_topbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/text"
+        android:layout_centerInParent="true"
         android:gravity="center"
-        android:text="测试"
-        android:textSize="24sp"/>
-</LinearLayout>
+        android:text="约厨"
+        android:textColor="@color/text_topbar"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/div_white" />
+
+</android.support.v7.widget.Toolbar>
