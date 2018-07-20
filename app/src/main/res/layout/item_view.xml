@@ -1,34 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/refreshLayout"
-    layout_height=""
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/indexbg"
-    android:orientation="vertical"
-    app:srlAccentColor="@android:color/white"
-    app:srlEnablePreviewInEditMode="true"
-    app:srlPrimaryColor="#444444">
+    android:orientation="vertical">
 
-    <pl.droidsonroids.gif.GifImageView
+    <include
+        layout="@layout/ly_test"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:scaleType="centerCrop"
-        android:src="@mipmap/gif_header_repast" />
+        android:layout_height="45dp"
+        android:layout_gravity="top" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyleview_everyday"
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        layout_height=""
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/title_everyday" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/indexbg"
+        android:orientation="vertical"
+        app:srlAccentColor="@android:color/white"
+        app:srlEnablePreviewInEditMode="true"
+        app:srlPrimaryColor="#444444">
 
-    <com.scwang.smartrefresh.layout.footer.BallPulseFooter
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/gif_header_repast" />
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyleview_everyday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/title_everyday" />
 
-</com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        <com.scwang.smartrefresh.layout.footer.BallPulseFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>
 
 
 

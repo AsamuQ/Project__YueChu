@@ -4,35 +4,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
-    android:layout_height="48dp"
-    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    android:layout_height="45dp"
+    android:minHeight="45dp"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    android:background="@drawable/indexbg_top">
+    android:background="@drawable/indexbg_top"
+    app:titleTextAppearance="@style/Toolbar">
 
-    <ImageView
-        android:id="@+id/title_back"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/txt_topbar"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/my_normal"
-        android:visibility="gone" />
-    <TextView
-        android:id="@+id/title_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
-        android:textColor="@color/bg_gray"
-        android:text="@string/app_name"/>
-    <TextView
-        android:id="@+id/title_rightTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:layout_marginRight="10dp"
-        android:layout_gravity="right"
-        android:textColor="@color/bg_gray"
-        android:text="@string/app_name"
-        android:visibility="gone"/>
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="约厨"
+        android:textColor="@color/text_topbar"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/div_white" />
+
 </android.support.v7.widget.Toolbar>
