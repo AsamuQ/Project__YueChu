@@ -15,10 +15,12 @@
 ```
 
 ## 应用截图
-![image](https://github.com/AsamuQ/Project__YueChu/blob/master/appPicture/login.png?raw=true)
-![image](https://github.com/AsamuQ/Project__YueChu/blob/master/appPicture/index.png)
-![image](https://github.com/AsamuQ/Project__YueChu/blob/master/appPicture/ItemView.png)
-![image](https://github.com/AsamuQ/Project__YueChu/blob/master/appPicture/Item_description.png)
+|登陆页面|首页|
+|:---:|:---:|
+|![image](https://github.com/AsamuQ/Project__YueChu/blob/master/appPicture/login.png?raw=true)|![image](https://github.com/AsamuQ/Project__YueChu/blob/master/appPicture/index.png)|
+|浏览页面|描述页面|
+|:---:|:---:|
+|![image](https://github.com/AsamuQ/Project__YueChu/blob/master/appPicture/ItemView.png)|![image](https://github.com/AsamuQ/Project__YueChu/blob/master/appPicture/Item_description.png)
 
 ## 团队成员
 [Asamu](https://github.com/AsamuQ)    
