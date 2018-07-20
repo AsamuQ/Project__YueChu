@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,6 +22,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 
 public class ItemDescriptionActivity extends Activity {
+    private ImageView back;
     private ImageView imageView_item;
     private TextView tv_des_item;
     private TextView tv_steps;
@@ -36,6 +38,15 @@ public class ItemDescriptionActivity extends Activity {
         imageView_item=(ImageView)findViewById(R.id.imageView_item);
         tv_des_item=(TextView)findViewById(R.id.tv_des_item);
         tv_steps=(TextView)findViewById(R.id.tv_steps);
+        back=(ImageView)findViewById(R.id.toolbar_back);
+
+        //返回事件
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         Intent intent=getIntent();
         Bundle bundle=intent.getExtras();

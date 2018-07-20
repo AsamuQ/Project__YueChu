@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.yuechu.R;
 
 public class phbActivity extends Activity {
+    private ImageView back;
     private LinearLayout la1;
     private LinearLayout la2;
     private LinearLayout la3;
@@ -17,6 +19,15 @@ public class phbActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phb);
+
+        back=(ImageView)findViewById(R.id.toolbar_back);
+        //返回事件
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         la1=(LinearLayout)findViewById(R.id.la1);
         la2=(LinearLayout)findViewById(R.id.la2);

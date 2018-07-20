@@ -12,8 +12,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.yuechu.R;
 import com.example.yuechu.Recipe;
@@ -30,6 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ItemView_Activity extends Activity {
+    private ImageView back;
     private RecyclerView recyclerView;
     private SmartRefreshLayout refreshLayout;
     private RecyclerViewAdapter adapter;
@@ -82,6 +85,15 @@ private void init(){
         recyclerView=findViewById(R.id.recyleview_everyday);
         gridLayoutManager=new GridLayoutManager(this,2);
         refreshLayout=findViewById(R.id.refreshLayout);
+        back=(ImageView)findViewById(R.id.toolbar_back);
+
+        //返回事件
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         title.setText(getIntent().getExtras().getString("title"));
         Url=getIntent().getExtras().getString("url");

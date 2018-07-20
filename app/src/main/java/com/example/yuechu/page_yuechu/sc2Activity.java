@@ -8,6 +8,8 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -18,14 +20,22 @@ import java.io.File;
 
 
 public class sc2Activity extends Activity {
-
-
+    private ImageView back;
     private VideoView videoView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sc2);
+
+        back=(ImageView)findViewById(R.id.toolbar_back);
+        //返回事件
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         //本地的视频  需要在手机SD卡根目录添加一个视频
         String videoUrl1 = Environment.getExternalStorageDirectory().getPath() + "/sdcard/ms.mp4";//不知道哪错了

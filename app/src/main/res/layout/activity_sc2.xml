@@ -15,6 +15,16 @@
         android:background="@drawable/bj4"
         android:scaleType="centerCrop">
 
+        <ImageView
+            android:id="@+id/toolbar_back"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_right"
+            android:textSize="36dp" />
+
         <TextView
             android:id="@+id/txt_topbar"
             android:layout_width="match_parent"

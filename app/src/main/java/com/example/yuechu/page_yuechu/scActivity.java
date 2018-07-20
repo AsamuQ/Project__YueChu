@@ -13,12 +13,22 @@ import android.widget.LinearLayout;
 import com.example.yuechu.R;
 
 public class scActivity extends Activity {
+    private ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sc);
 
+        back=(ImageView)findViewById(R.id.toolbar_back);
+
+        //返回事件
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         ImageView bla1 = (ImageView) findViewById(R.id.iv1);
         bla1 .setOnClickListener(new View.OnClickListener() {

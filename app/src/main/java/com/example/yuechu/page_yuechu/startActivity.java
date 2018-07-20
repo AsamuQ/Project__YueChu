@@ -3,19 +3,20 @@ package com.example.yuechu.page_yuechu;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import com.example.yuechu.IndexActivity;
 import com.example.yuechu.R;
 import com.example.yuechu.login.LoginActivity;
 
 public class startActivity extends Activity {
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +63,9 @@ public class startActivity extends Activity {
     }
 
     private void start() {
+
         Intent intent = new Intent(startActivity.this, LoginActivity.class);
+
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         finish();

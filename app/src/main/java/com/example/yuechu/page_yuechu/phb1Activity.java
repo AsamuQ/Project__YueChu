@@ -4,12 +4,14 @@ import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.DrawableRes;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.yuechu.R;
 
 public class phb1Activity extends Activity {
+    private ImageView back;
     private TextView tv_name;
     private TextView tv_des;
     private ImageView imageView;
@@ -28,5 +30,13 @@ public class phb1Activity extends Activity {
         tv_des.setText(chief.getCheif_dec());
         imageView.setImageResource(chief.getImgsrc());
 
+        back=(ImageView)findViewById(R.id.toolbar_back);
+        //返回事件
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }
