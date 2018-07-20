@@ -41,4 +41,5 @@ dependencies {
     //没有使用特殊Header，可以不加这行
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.3'
     implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
 }

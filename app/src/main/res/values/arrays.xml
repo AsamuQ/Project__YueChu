@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="prepare_time">
+        <item>15分钟以内</item>
+        <item>15~30分钟</item>
+        <item>30~60分钟</item>
+        <item>1小时~一天</item>
+        <item>一天以上</item>
+    </string-array>
+    <string-array name="cook_time">
+        <item>15分钟以内</item>
+        <item>15~30分钟</item>
+        <item>30~60分钟</item>
+        <item>1小时~一天</item>
+        <item>一天以上</item>
+    </string-array>
+    <string-array name="taste_type">
+        <item>酸</item>
+        <item>甜</item>
+        <item>辣</item>
+        <item>酸辣</item>
+        <item>香辣</item>
+        <item>孜然</item>
+        <item>咸鲜</item>
+        <item>酸甜</item>
+        <item>鱼香</item>
+        <item>家常</item>
+        <item>五香</item>
+    </string-array>
+    <string-array name="difficulty_type">
+        <item>简单</item>
+        <item>普通</item>
+        <item>高级</item>
+    </string-array>
+</resources>
