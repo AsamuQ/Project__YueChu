@@ -17,12 +17,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".IndexActivity"/>
-        <activity android:name=".Page_Index.ItemView_Activity"/>
+        <activity android:name=".IndexActivity" />
+        <activity android:name=".Page_Index.ItemView_Activity" />
         <activity android:name=".Page_Index.ItemDescriptionActivity" />
-        <activity android:name=".login.LoginActivity">
-
-        </activity>
+        <activity android:name=".login.LoginActivity" />
         <activity android:name=".register.RegisterActivity" />
         <activity android:name=".page_yuechu.startActivity">
             <intent-filter>
@@ -41,7 +39,12 @@
         <activity android:name=".page_yuechu.phb1Activity" />
         <activity android:name=".page_yuechu.xs1Activity" />
         <activity android:name=".page_yuechu.xs2Activity" />
-        <activity android:name=".page_yuechu.xs3Activity"></activity>
+        <activity android:name=".page_yuechu.xs3Activity" />
+        <activity android:name=".page_my.UnregisterActivity"/>
+        <activity android:name=".page_my.PersonalActivity"></activity>
+        <activity android:name=".page_my.MenuActivity"></activity>
+        <activity android:name=".page_my.InsertMenuActivity" />
+        <activity android:name=".page_my.DisplayActivity" />
     </application>
 
 </manifest>

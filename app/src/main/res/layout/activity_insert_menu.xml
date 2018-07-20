@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/top"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="0dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="14dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/falsepic" />
+
+        <TextView
+            android:id="@+id/menu_btn"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="发菜谱"
+            android:textColor="@color/bg_black" />
+
+        <Button
+            android:id="@+id/draft_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="存草稿" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/Chengpintu"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="0"
+                android:background="#00000000"
+                android:scaleType="centerCrop"
+                android:src="@drawable/chengpintu" />
+
+            <TextView
+                android:id="@+id/menuname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0"
+                android:gravity="center_vertical"
+                android:text="菜谱名（必填）"
+                android:textColor="@color/bg_black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:orientation="horizontal"
+                android:background="#FFFFFF"
+                >
+
+                <EditText
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/menu_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/bg_black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="0"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="主料"
+                android:textColor="@color/bg_black" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/main_name"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="主料名称"
+                    android:textColor="@color/bg_black" />
+
+                <TextView
+                    android:id="@+id/main_num"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="用量"
+                    android:textColor="@color/bg_black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_food"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/Lmain1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/mainnamebtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border3"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:hint="如：土豆"
+                        android:textColor="@color/bg_black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/mainnumbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border3"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:hint="如：一个"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/bg_black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Lmainadd"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/addmainp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0"
+                    android:background="#00000000"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/add" />
+
+                <Button
+                    android:id="@+id/addmainb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="#00000000"
+                    android:gravity="center_vertical|start"
+                    android:text="添加主料"
+                    android:textColor="@android:color/holo_red_dark" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fu"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="0"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="辅料"
+                android:textColor="@color/bg_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/fu_name"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="辅料名称"
+                    android:textColor="@color/bg_black" />
+
+                <TextView
+                    android:id="@+id/fu_num"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="用量"
+                    android:textColor="@color/bg_black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fu_food"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/Lfu1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/funamebtn"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border3"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:hint="如：油"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/bg_black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/funumbtn"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border3"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:hint="如：10g"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/bg_black"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="20dp"
+                android:id="@+id/Laddfu"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/addfup"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0"
+                    android:background="#00000000"
+                    android:scaleType="fitStart"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/add" />
+
+                <Button
+                    android:id="@+id/addfub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="#00000000"
+                    android:gravity="center_vertical|start"
+                    android:text="添加辅料"
+                    android:textColor="@android:color/holo_red_dark" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/step"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="0"
+                android:gravity="center_vertical"
+                android:text="做法步骤（至少三步）"
+                android:textColor="@color/bg_black" />
+
+            <LinearLayout
+                android:id="@+id/step_food"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="#FFFFFF"
+                        android:layout_marginBottom="10dp"
+                        >
+
+                        <EditText
+                            android:id="@+id/stepedit"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:ems="10"
+                            android:gravity="center_vertical"
+                            android:hint="请输入步骤"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/bg_black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/stepimage"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="#00000000"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/steppic" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Laddstep"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/addstep"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redradiusborder"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="添加步骤"
+                    android:textColor="@color/bg_topbar" />
+
+                <Button
+                    android:id="@+id/adjuststep"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redradiusborder"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="调整步骤"
+                    android:textColor="@color/bg_topbar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Lother"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="40px"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/other"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:text="其他"
+                    android:textColor="@color/bg_black" />
+
+                <LinearLayout
+                    android:id="@+id/prepare"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#ffffff"
+                    android:layout_marginBottom="5px"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/prepare_b"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.5"
+                        android:background="#00ffffff"
+                        android:gravity="center_vertical|start"
+                        android:text="准备时间" />
+
+                    <Spinner
+                        android:id="@+id/prepare_s"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:spinnerMode="dialog"
+                        android:entries="@array/prepare_time" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cook"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:layout_marginBottom="5px"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/cook_b"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.5"
+                        android:background="#00ffffff"
+                        android:gravity="center_vertical|start"
+                        android:text="烹饪时间" />
+
+                    <Spinner
+                        android:id="@+id/cook_s"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:spinnerMode="dialog"
+                        android:entries="@array/cook_time"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/taste"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:layout_marginBottom="5px"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/taste_b"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.5"
+                        android:background="#00ffffff"
+                        android:gravity="center_vertical|start"
+                        android:text="口味" />
+
+                    <Spinner
+                        android:id="@+id/taste_s"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:spinnerMode="dialog"
+                        android:entries="@array/taste_type"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/difficulty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:layout_marginBottom="5px"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/difficulty_b"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.5"
+                        android:background="#00ffffff"
+                        android:gravity="center_vertical|start"
+                        android:text="难度" />
+
+                    <Spinner
+                        android:id="@+id/difficulty_s"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:spinnerMode="dialog"
+                        android:entries="@array/difficulty_type"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/menu_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_weight="0"
+                android:background="@drawable/redradiusborder"
+                android:text="立即发布"
+                android:textColor="@color/bg_topbar" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

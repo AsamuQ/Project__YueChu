@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:orientation="vertical">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:background="#FFFFFF"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/step_edit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="请输入步骤"
+                android:inputType="textPersonName"
+                android:textColor="@color/bg_black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/step_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_weight="0"
+        android:background="#00000000"
+        android:scaleType="centerCrop"
+        android:src="@drawable/steppic" />
+
+</LinearLayout>
