@@ -16,10 +16,10 @@ public class IndexActivity extends Activity implements RadioGroup.OnCheckedChang
     private RadioButton rb_channel;
 
     //Fragment Object
-    private FirstFragment fg1;
-    private ThirdFragment fg3;
+    private FirstFragment  fg1;
+    private SecondFragment fg2;
+    private ThirdFragment  fg3;
     private FourthFragment fg4;
-    private MyFragment fg2;
     private FragmentManager fManager;
 
     @Override
@@ -52,7 +52,8 @@ public class IndexActivity extends Activity implements RadioGroup.OnCheckedChang
                 break;
             case R.id.rb_message:
                 if(fg2 == null){
-                    fg2 = new MyFragment("第二个Fragment");
+                    fg2 = new SecondFragment();
+                    fg2.setContext(getApplicationContext());
                     fTransaction.add(R.id.ly_content,fg2);
                 }else{
                     fTransaction.show(fg2);

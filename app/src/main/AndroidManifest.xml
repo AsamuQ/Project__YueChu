@@ -40,11 +40,12 @@
         <activity android:name=".page_yuechu.xs1Activity" />
         <activity android:name=".page_yuechu.xs2Activity" />
         <activity android:name=".page_yuechu.xs3Activity" />
-        <activity android:name=".page_my.UnregisterActivity"/>
-        <activity android:name=".page_my.PersonalActivity"></activity>
-        <activity android:name=".page_my.MenuActivity"></activity>
+        <activity android:name=".page_my.UnregisterActivity" />
+        <activity android:name=".page_my.PersonalActivity" />
+        <activity android:name=".page_my.MenuActivity" />
         <activity android:name=".page_my.InsertMenuActivity" />
         <activity android:name=".page_my.DisplayActivity" />
+        <activity android:name=".page_search.SearchActivity"></activity>
     </application>
 
 </manifest>
