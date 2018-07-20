@@ -12,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.yuechu.R;
@@ -77,11 +78,12 @@ private void init(){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item_view);
 
+        TextView title=(TextView)findViewById(R.id.txt_topbar);
         recyclerView=findViewById(R.id.recyleview_everyday);
         gridLayoutManager=new GridLayoutManager(this,2);
         refreshLayout=findViewById(R.id.refreshLayout);
 
-        setTitle(getIntent().getExtras().getString("title"));
+        title.setText(getIntent().getExtras().getString("title"));
         Url=getIntent().getExtras().getString("url");
 
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {

@@ -32,6 +32,7 @@ public class ItemDescriptionActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_item_description);
 
+        TextView title=(TextView)findViewById(R.id.txt_topbar);
         imageView_item=(ImageView)findViewById(R.id.imageView_item);
         tv_des_item=(TextView)findViewById(R.id.tv_des_item);
         tv_steps=(TextView)findViewById(R.id.tv_steps);
@@ -41,7 +42,7 @@ public class ItemDescriptionActivity extends Activity {
         recipe= (Recipe) bundle.getSerializable("recipe");
         String Url=recipe.getUrl();
 
-        setTitle(recipe.getName());
+        title.setText(recipe.getName());
         Glide.with(this).load(recipe.getPortrait()).into(imageView_item);
         tv_des_item.setText("__by"+recipe.getDescription());
 
