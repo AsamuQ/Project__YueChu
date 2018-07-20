@@ -91,7 +91,7 @@
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="60dp"
-                    android:layout_gravity="left"
+                    android:layout_gravity="right"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok" />
 

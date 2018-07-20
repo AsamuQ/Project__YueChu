@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.yuechu.R;
@@ -19,23 +20,22 @@ public class scActivity extends Activity {
         setContentView(R.layout.activity_sc);
 
 
-        Button bla1 = (Button) findViewById(R.id.bt1);
+        ImageView bla1 = (ImageView) findViewById(R.id.iv1);
         bla1 .setOnClickListener(new View.OnClickListener() {
             public void onClick(View v4) {
                 Intent it = new Intent(scActivity.this, sc1Activity.class);
                 startActivity(it);
             }});
 
-        Button bla2 = (Button) findViewById(R.id.bt2);
+        ImageView bla2 = (ImageView) findViewById(R.id.iv2);
         bla2 .setOnClickListener(new View.OnClickListener() {
             public void onClick(View v4) {
                 Intent it = new Intent(scActivity.this, sc2Activity.class);
                 startActivity(it);
             }});
 
-
-        Button bla4 = (Button) findViewById(R.id.bt3);
-        bla4 .setOnClickListener(new View.OnClickListener() {
+        ImageView bla3 = (ImageView) findViewById(R.id.iv3);
+        bla3 .setOnClickListener(new View.OnClickListener() {
             public void onClick(View v4) {
                 Intent it = new Intent(scActivity.this, sc3Activity.class);
                 startActivity(it);

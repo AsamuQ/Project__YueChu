@@ -105,7 +105,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:src="@drawable/jb4" />
+                        android:src="@drawable/jb3" />
 
                     <TextView
                         android:id="@+id/textView3"
@@ -197,7 +197,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:src="@drawable/jb4" />
+                        android:src="@drawable/jb1" />
 
                     <TextView
                         android:id="@+id/textView7"
