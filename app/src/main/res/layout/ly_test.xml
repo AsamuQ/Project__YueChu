@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="16dp">
 
-    <TextView
-        android:layout_width="match_parent"
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/indexbg_top">
+
+    <ImageView
+        android:id="@+id/title_back"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/text"
-        android:gravity="center"
-        android:text="测试"
-        android:textSize="24sp"/>
-</LinearLayout>
+        android:src="@mipmap/my_normal"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/title_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="@color/bg_gray"
+        android:text="@string/app_name"/>
+    <TextView
+        android:id="@+id/title_rightTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="right"
+        android:textColor="@color/bg_gray"
+        android:text="@string/app_name"
+        android:visibility="gone"/>
+</android.support.v7.widget.Toolbar>
