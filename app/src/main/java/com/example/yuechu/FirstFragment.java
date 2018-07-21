@@ -22,8 +22,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
-import com.example.yuechu.Page_Index.ItemView_Activity;
 import com.example.yuechu.Page_Index.ItemDescriptionActivity;
+import com.example.yuechu.Page_Index.ItemView_Activity;
 import com.example.yuechu.Page_Index.RecyclerViewAdapter;
 
 import org.jetbrains.annotations.Nullable;

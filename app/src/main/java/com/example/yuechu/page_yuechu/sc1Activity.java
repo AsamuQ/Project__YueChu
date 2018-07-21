@@ -1,23 +1,14 @@
 package com.example.yuechu.page_yuechu;
 
-import java.io.File;
-import java.io.IOException;
-
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.PixelFormat;
 import android.hardware.Camera;
-import android.hardware.Camera.CameraInfo;
-import android.hardware.Camera.Parameters;
 import android.media.MediaRecorder;
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -30,9 +21,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import com.example.yuechu.R;
+
+import java.io.File;
+import java.io.IOException;
 
 public class sc1Activity extends Activity  implements  OnClickListener,SurfaceHolder.Callback,RadioGroup.OnCheckedChangeListener
 {

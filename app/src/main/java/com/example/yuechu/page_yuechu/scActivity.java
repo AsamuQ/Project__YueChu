@@ -1,14 +1,11 @@
 package com.example.yuechu.page_yuechu;
 
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import com.example.yuechu.R;
 

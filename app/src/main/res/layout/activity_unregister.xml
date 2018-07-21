@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -12,7 +11,6 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/top"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1.8"
@@ -26,7 +24,6 @@
                 android:orientation="horizontal">
 
                 <com.example.yuechu.page_my.CircleImageView
-                    android:id="@+id/portrait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -64,7 +61,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/diarynum"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -72,7 +68,6 @@
                     android:text="0" />
 
                 <TextView
-                    android:id="@+id/menunum"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -80,7 +75,6 @@
                     android:text="0" />
 
                 <TextView
-                    android:id="@+id/attentionnum"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -96,7 +90,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/diary"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -112,7 +105,6 @@
                     android:text="菜谱" />
 
                 <TextView
-                    android:id="@+id/attention"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -136,7 +128,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/homepic"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginBottom="4dp"
@@ -162,7 +153,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/menupic"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginBottom="4dp"
@@ -170,7 +160,6 @@
                     android:src="@drawable/menu" />
 
                 <TextView
-                    android:id="@+id/menu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -187,7 +176,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/collectpic"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginBottom="4dp"
@@ -195,7 +183,6 @@
                     android:src="@drawable/collect" />
 
                 <TextView
-                    android:id="@+id/collect"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -219,7 +206,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/draftpic"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginBottom="4dp"
@@ -227,7 +213,6 @@
                     android:src="@drawable/draft" />
 
                 <TextView
-                    android:id="@+id/draft"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -244,7 +229,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/taskpic"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginBottom="4dp"
@@ -252,7 +236,6 @@
                     android:src="@drawable/task" />
 
                 <TextView
-                    android:id="@+id/task"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -269,7 +252,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/giftpic"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginBottom="4dp"
@@ -277,7 +259,6 @@
                     android:src="@drawable/gift" />
 
                 <TextView
-                    android:id="@+id/gift"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -301,7 +282,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/accountpic"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginBottom="4dp"
@@ -309,7 +289,6 @@
                     android:src="@drawable/account" />
 
                 <TextView
-                    android:id="@+id/account"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -326,7 +305,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/newspic"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginBottom="4dp"
@@ -334,7 +312,6 @@
                     android:src="@drawable/hnews" />
 
                 <TextView
-                    android:id="@+id/news"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -351,7 +328,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/helppic"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginBottom="4dp"
@@ -359,7 +335,6 @@
                     android:src="@drawable/help" />
 
                 <TextView
-                    android:id="@+id/help"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -23,7 +21,6 @@
             android:src="@drawable/falsepic" />
 
         <TextView
-            android:id="@+id/menu_btn"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -92,7 +89,6 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/main"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="0"
@@ -106,7 +102,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/main_name"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -116,7 +111,6 @@
                     android:textColor="@color/bg_black" />
 
                 <TextView
-                    android:id="@+id/main_num"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -134,7 +128,6 @@
                 android:layout_weight="0"
                 android:orientation="vertical">
                 <LinearLayout
-                    android:id="@+id/Lmain1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0"
@@ -169,7 +162,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/Lmainadd"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="0"
@@ -198,7 +190,6 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/fu"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="0"
@@ -243,7 +234,6 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/Lfu1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0"
@@ -281,7 +271,6 @@
 
             <LinearLayout
                 android:layout_marginBottom="20dp"
-                android:id="@+id/Laddfu"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="0"
@@ -365,7 +354,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/Laddstep"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:orientation="horizontal"
@@ -385,7 +373,6 @@
                     android:textColor="@color/bg_topbar" />
 
                 <Button
-                    android:id="@+id/adjuststep"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="30dp"
@@ -397,7 +384,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/Lother"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0"
@@ -405,7 +391,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/other"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
@@ -414,7 +399,6 @@
                     android:textColor="@color/bg_black" />
 
                 <LinearLayout
-                    android:id="@+id/prepare"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="#ffffff"
@@ -422,7 +406,6 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/prepare_b"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="10dp"
@@ -442,7 +425,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/cook"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#ffffff"
@@ -450,7 +432,6 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/cook_b"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="10dp"
@@ -471,7 +452,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/taste"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#ffffff"
@@ -479,7 +459,6 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/taste_b"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="10dp"
@@ -500,7 +479,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/difficulty"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#ffffff"
@@ -508,7 +486,6 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/difficulty_b"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="10dp"

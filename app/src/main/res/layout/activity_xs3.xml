@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
 
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".page_yuechu.xs3Activity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".page_yuechu.xs3Activity">
 
     <RelativeLayout
         android:id="@+id/ly_top_bar"
@@ -50,14 +49,12 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView10"
                         android:layout_width="150dp"
                         android:layout_height="60dp"
                         android:text="悬赏内容"
                         android:textSize="24sp" />
 
                     <EditText
-                        android:id="@+id/editText2"
                         android:layout_width="300dp"
                         android:layout_height="60dp"
                         android:layout_weight="1"
@@ -72,14 +69,12 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView11"
                         android:layout_width="150dp"
                         android:layout_height="60dp"
                         android:text="悬赏奖励"
                         android:textSize="24sp" />
 
                     <EditText
-                        android:id="@+id/editText4"
                         android:layout_width="300dp"
                         android:layout_height="60dp"
                         android:layout_weight="1"

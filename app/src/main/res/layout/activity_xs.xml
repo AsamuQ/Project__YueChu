@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
 
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".page_yuechu.xsActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".page_yuechu.xsActivity">
 
     <include layout="@layout/ly_test"/>
 
@@ -28,7 +27,6 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView13"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="8"
@@ -37,7 +35,6 @@
                         android:textSize="24sp" />
 
                     <TextView
-                        android:id="@+id/textView16"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="2"
@@ -54,7 +51,6 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView14"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="8"
@@ -62,7 +58,6 @@
                         android:textSize="24sp" />
 
                     <TextView
-                        android:id="@+id/textView17"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -78,7 +73,6 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView15"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="8"
@@ -86,7 +80,6 @@
                         android:textSize="24sp" />
 
                     <TextView
-                        android:id="@+id/textView18"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -96,7 +89,6 @@
                 </LinearLayout>
 
                 <ImageView
-                    android:id="@+id/imageView10"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:src="@drawable/bj5" />

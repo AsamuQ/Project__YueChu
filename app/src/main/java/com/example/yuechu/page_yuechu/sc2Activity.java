@@ -1,8 +1,6 @@
 package com.example.yuechu.page_yuechu;
 
 
-
-
 import android.app.Activity;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -16,8 +14,6 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.example.yuechu.R;
-
-import java.io.File;
 
 
 public class sc2Activity extends Activity {

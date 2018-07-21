@@ -1,9 +1,7 @@
 package com.example.yuechu.page_yuechu;
 
 import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.DrawableRes;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -13,7 +11,6 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/returnbtn"
             android:layout_width="0dp"
             android:layout_height="12dp"
             android:layout_marginTop="14dp"
@@ -23,7 +20,6 @@
             android:src="@drawable/falsepic" />
 
         <TextView
-            android:id="@+id/menu_n"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -32,7 +28,6 @@
             android:textColor="@color/bg_black" />
 
         <Button
-            android:id="@+id/collect"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -79,7 +74,6 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/main"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="0"
@@ -93,7 +87,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/main_name"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -103,7 +96,6 @@
                     android:textColor="@color/bg_black" />
 
                 <TextView
-                    android:id="@+id/main_num"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -121,7 +113,6 @@
                 android:layout_weight="0" />
 
             <TextView
-                android:id="@+id/fu"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="0"
@@ -165,7 +156,6 @@
                 android:layout_weight="0" />
 
             <TextView
-                android:id="@+id/step_text"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="0"
@@ -181,7 +171,6 @@
                 android:layout_weight="0" />
 
             <LinearLayout
-                android:id="@+id/Lother"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0"
@@ -189,7 +178,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/other"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
@@ -198,7 +186,6 @@
                     android:textColor="@color/bg_black" />
 
                 <LinearLayout
-                    android:id="@+id/prepare"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="#ffffff"
@@ -206,7 +193,6 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/prepare_b"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="10dp"
@@ -226,7 +212,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/cook"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#ffffff"
@@ -234,7 +219,6 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/cook_b"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="10dp"
@@ -254,7 +238,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/taste"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#ffffff"
@@ -262,7 +245,6 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/taste_b"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="10dp"
@@ -282,7 +264,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/difficulty"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#ffffff"
@@ -290,7 +271,6 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/difficulty_b"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="10dp"

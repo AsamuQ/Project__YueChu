@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
 
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".page_yuechu.sc2Activity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".page_yuechu.sc2Activity">
 
     <RelativeLayout
         android:id="@+id/ly_top_bar"
@@ -56,7 +55,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView12"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_weight="1"

@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">约厨</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
 
     <string name="tab_menu_index">首页</string>
     <string name="tab_menu_search">搜索</string>
