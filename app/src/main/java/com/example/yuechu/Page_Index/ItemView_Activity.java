@@ -85,9 +85,9 @@ private void init(){
         recyclerView=findViewById(R.id.recyleview_everyday);
         gridLayoutManager=new GridLayoutManager(this,2);
         refreshLayout=findViewById(R.id.refreshLayout);
-        back=(ImageView)findViewById(R.id.toolbar_back);
 
         //返回事件
+        back=(ImageView)findViewById(R.id.toolbar_back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

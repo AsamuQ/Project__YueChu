@@ -63,25 +63,19 @@ public class SearchActivity extends Activity {
             }
         });
 
-
-        imageView=(ImageView)findViewById(R.id.iv_arrow);
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("https://list.tmall.com/search_product.htm?spm=a3204.24086.7219553831.1.e32b58e73iXubM&q=%BD%F8%BF%DA%CB%AE%B9%FB&user_id=725677994&pos=1&cat=52598012&style=g&acm=201509244.1003.2.1897626&scm=1003.2.201509244.OTHER_1513675242197_1897626&industryCatId=50514008"));
+                Intent intent=new Intent(SearchActivity.this,Search_ItemActivity.class);
+                intent.putExtra("search","果");
                 startActivity(intent);
             }
         });
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("https://list.tmall.com/search_product.htm?spm=a3204.24086.1213532585.5.e32b58e7v3q5MW&active=1&acm=201509150.1003.2.448532&sort=s&tmhkmain=0&industryCatId=50514008&smAreaId=420100&user_id=725677994&pos=2&cat=52622013&style=g&search_condition=1&scm=1003.2.201509150.OTHER_1499481921225_448532"));
+                Intent intent=new Intent(SearchActivity.this,Search_ItemActivity.class);
+                intent.putExtra("search","肉");
                 startActivity(intent);
             }
         });
@@ -89,54 +83,35 @@ public class SearchActivity extends Activity {
         imageView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("https://list.tmall.com/search_product.htm?spm=a3204.24086.1213532585.7.e32b58e7v3q5MW&q=&user_id=725677994&pos=3&cat=52636010&end_price=&start_price=&acm=201509150.1003.2.448532&scm=1003.2.201509150.OTHER_1496697933034_448532&brand=97097173%2C274838064"));
+                Intent intent=new Intent(SearchActivity.this,Search_ItemActivity.class);
+                intent.putExtra("search","鱼");
                 startActivity(intent);
             }
         });
         imageView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("https://list.tmall.com/search_product.htm?spm=a3204.24086.1213532585.19.e32b58e7v3q5MW&acm=201509150.1003.2.448532&sort=s&industryCatId=52598012&smAreaId=420102&q=%CA%DF%B2%CB&user_id=725677994&pos=6&cat=52624008&style=g&from=chaoshi.index.pc_1_searchbutton&search_condition=23&scm=1003.2.201509150.OTHER_1496379106380_448532"));
+                Intent intent=new Intent(SearchActivity.this,Search_ItemActivity.class);
+                intent.putExtra("search","菜");
                 startActivity(intent);
             }
         });
         tv_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("https://list.tmall.com/search_product.htm?q=%CD%C1%B6%B9&user_id=725677994&type=p&cat=50514008&spm=a3204.7139825.a2227oh.d100&from=chaoshi.index.pc_1_searchbutton"));
+                String search=et_content.getText().toString();
+                Intent intent=new Intent(SearchActivity.this,Search_ItemActivity.class);
+                intent.putExtra("search",search);
                 startActivity(intent);
             }
         });
-
-        InputFilter filter=new InputFilter() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
-            public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
-                for (int i = start; i < end; i++) {
-                    if (!isChinese(source.charAt(i))) {
-                        return "";
-                    }
-                }
-                return null;
+            public void onClick(View v) {
+                finish();
+                outAnimation();
             }
-        };
-        tv_search.setFilters(new InputFilter[]{filter});
-
-
-
-
-
-
-
-
+        });
     }
 
 

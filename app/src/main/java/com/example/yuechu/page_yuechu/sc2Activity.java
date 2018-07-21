@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.Toast;
@@ -20,6 +21,8 @@ import java.io.File;
 
 
 public class sc2Activity extends Activity {
+    private Button btn_start;
+    private Button btn_end;
     private ImageView back;
     private VideoView videoView;
 
@@ -28,6 +31,8 @@ public class sc2Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sc2);
 
+        btn_start=(Button)findViewById(R.id.btn_start);
+        btn_end=(Button)findViewById(R.id.btn_end);
         back=(ImageView)findViewById(R.id.toolbar_back);
         //返回事件
         back.setOnClickListener(new View.OnClickListener() {
@@ -58,8 +63,27 @@ public class sc2Activity extends Activity {
         //设置视频路径
         videoView.setVideoURI(uri);
 
-        //开始播放视频
-        videoView.start();
+        btn_start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(btn_start.getText().equals("开始")){
+                    //开始播放视频
+                    videoView.start();
+                    btn_start.setText("暂停");
+                }else {
+                    videoView.pause();
+                    btn_start.setText("开始");
+                }
+            }
+        });
+
+        btn_end.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                videoView.stopPlayback();
+            }
+        });
+
     }
 
     class MyPlayerOnCompletionListener implements MediaPlayer.OnCompletionListener {

@@ -2,19 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/two"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/two"
-    android:orientation="vertical"
-    android:background="@color/bg_white">
-
-
+    android:background="#ffffff"
+    android:orientation="vertical">
 
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -43,13 +42,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_gravity="top"
+                    android:background="@null"
+                    android:enabled="true"
                     android:gravity="center"
                     android:hint="请输入搜索内容"
-                    android:background="@null"
-                    android:textColor="@android:color/black"
-                    android:transitionName="shareTransition"
                     android:inputType="text"
-                    android:enabled="true"/>
+                    android:textColor="@android:color/black"
+                    android:transitionName="shareTransition" />
 
                 <ImageView
                     android:id="@+id/iv_arrow"
@@ -79,12 +78,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/white"
-                android:gravity="center">
-            </FrameLayout>
+                android:gravity="center"></FrameLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
-            </LinearLayout>
+                android:layout_height="50dp"></LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
@@ -98,71 +96,80 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/shuiguo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:src="@drawable/shuiguo"
-                    />
+                    android:src="@drawable/shuiguo" />
+
                 <ImageView
                     android:id="@+id/roulei"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:src="@drawable/roulei"/>
+                    android:src="@drawable/roulei" />
+
                 <ImageView
                     android:id="@+id/shuichan"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:src="@drawable/shuichan"/>
+                    android:src="@drawable/shuichan" />
+
                 <ImageView
                     android:id="@+id/shucai"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:src="@drawable/shucai"/>
+                    android:src="@drawable/shucai" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="水果"
+                    android:gravity="center"
                     android:paddingTop="10dp"
-                    android:gravity="center"/>
+                    android:text="水果" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="肉类"
+                    android:gravity="center"
                     android:paddingTop="10dp"
-                    android:gravity="center"/>
+                    android:text="肉类" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="水产"
+                    android:gravity="center"
                     android:paddingTop="10dp"
-                    android:gravity="center"/>
+                    android:text="水产" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="蔬菜"
+                    android:gravity="center"
                     android:paddingTop="10dp"
-                    android:gravity="center"/>
+                    android:text="蔬菜" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="30dp">
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
@@ -174,12 +181,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:orientation="horizontal">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -190,37 +198,39 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:paddingTop="35dp"
-                                android:gravity="center_horizontal"
-                                android:text="天天特价"
-                                android:textColor="@color/bg_black"
+                                android:layout_weight="2"
                                 android:clickable="true"
                                 android:focusable="true"
+                                android:gravity="center_horizontal"
+                                android:paddingTop="35dp"
+                                android:text="天天特价"
+                                android:textColor="@color/bg_black"
                                 android:textSize="20dp"
-                                android:textStyle="bold"
-                                android:layout_weight="2"
-                                />
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="美食一折起"
+                                android:layout_weight="1"
                                 android:gravity="center"
-                                android:layout_weight="1"/>
+                                android:text="美食一折起" />
                         </LinearLayout>
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="2">
+
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/banjia"
-                            />
+                            android:src="@drawable/banjia" />
                     </LinearLayout>
 
 
@@ -230,6 +240,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_weight="1">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -240,37 +251,39 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:paddingTop="35dp"
-                                android:gravity="center_horizontal"
-                                android:text="招商引资"
-                                android:textColor="@color/bg_black"
+                                android:layout_weight="2"
                                 android:clickable="true"
                                 android:focusable="true"
+                                android:gravity="center_horizontal"
+                                android:paddingTop="35dp"
+                                android:text="招商引资"
+                                android:textColor="@color/bg_black"
                                 android:textSize="20dp"
-                                android:textStyle="bold"
-                                android:layout_weight="2"
-                                />
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="加入我们"
+                                android:layout_weight="1"
                                 android:gravity="center"
-                                android:layout_weight="1"/>
+                                android:text="加入我们" />
                         </LinearLayout>
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="2">
+
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/zijin"
-                            />
+                            android:src="@drawable/zijin" />
                     </LinearLayout>
 
                 </LinearLayout>

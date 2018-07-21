@@ -45,7 +45,8 @@
         <activity android:name=".page_my.MenuActivity" />
         <activity android:name=".page_my.InsertMenuActivity" />
         <activity android:name=".page_my.DisplayActivity" />
-        <activity android:name=".page_search.SearchActivity"></activity>
+        <activity android:name=".page_search.SearchActivity"/>
+        <activity android:name=".page_search.Search_ItemActivity"/>
     </application>
 
 </manifest>

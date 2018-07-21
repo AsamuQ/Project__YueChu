@@ -24,16 +24,8 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:background="@android:color/holo_blue_light"
+                    android:background="@android:color/transparent"
                     android:layout_height="150dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:layout_gravity="top"
-                        android:paddingLeft="15dp"
-                        android:gravity="bottom"
-                        android:text="Title"
-                        android:textColor="@android:color/white" />
 
                     <TextView
                         android:id="@+id/tv_main"
@@ -62,15 +54,16 @@
                         android:gravity="center_vertical"
                         android:layout_gravity="bottom"
                         android:paddingLeft="15dp"
-                        android:textColor="@android:color/white"
+                        android:textColor="@android:color/black"
                         android:text="猜你喜欢"
-                        android:textSize="25dp"/>
-                </FrameLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp">
+                        android:textSize="18dp"/>
 
-                </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/div_white" />
+                </FrameLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
