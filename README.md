@@ -33,7 +33,7 @@
 
 |"约厨"|视频|网络视频|
 |:---:|:---:|:---:|
-|![image](https://github.com/AsamuQ/Project__YueChu/blob/master/appPicture/yuechu.png)|![image](https://github.com/AsamuQ/Project__YueChu/blob/master/appPicture/viedo.png)|![image](https://github.com/AsamuQ/Project__YueChu/blob/master/appPicture/viedo_net.png)
+|![image](https://github.com/AsamuQ/Project__YueChu/blob/master/appPicture/yuechu.png)|![image](https://github.com/AsamuQ/Project__YueChu/blob/master/appPicture/video.png)|![image](https://github.com/AsamuQ/Project__YueChu/blob/master/appPicture/video_net.png)
 
 |个人中心|添加食谱|
 |:---:|:---:|
