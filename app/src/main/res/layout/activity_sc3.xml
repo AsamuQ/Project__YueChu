@@ -6,5 +6,6 @@
     <VideoView
         android:id="@+id/videoView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></VideoView>
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"></VideoView>
 </LinearLayout>

@@ -20,7 +20,6 @@
         <activity android:name=".IndexActivity" />
         <activity android:name=".Page_Index.ItemView_Activity" />
         <activity android:name=".Page_Index.ItemDescriptionActivity" />
-        <activity android:name=".login.LoginActivity" />
         <activity android:name=".register.RegisterActivity" />
         <activity android:name=".page_yuechu.startActivity">
             <intent-filter>
@@ -45,8 +44,9 @@
         <activity android:name=".page_my.MenuActivity" />
         <activity android:name=".page_my.InsertMenuActivity" />
         <activity android:name=".page_my.DisplayActivity" />
-        <activity android:name=".page_search.SearchActivity"/>
-        <activity android:name=".page_search.Search_ItemActivity"/>
+        <activity android:name=".page_search.SearchActivity" />
+        <activity android:name=".page_search.Search_ItemActivity" />
+        <activity android:name=".login.LoginActivity" />
     </application>
 
 </manifest>
