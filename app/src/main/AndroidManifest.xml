@@ -45,6 +45,7 @@
         <activity android:name=".page_search.SearchActivity" />
         <activity android:name=".page_search.Search_ItemActivity" />
         <activity android:name=".login.LoginActivity" />
+        <activity android:name=".page_my.CareActivity"></activity>
     </application>
 
 </manifest>
