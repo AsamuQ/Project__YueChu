@@ -24,7 +24,8 @@ public class sc3Activity extends Activity {
          * videoView.setVideoPath(String path)
          * 以上两个方法都可以。
          */
-        videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ms));
+//        videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ms));
+        videoView.setVideoURI(Uri.parse("/sdcard/video.3pg"));
         videoView.start();
 
         //监听视频播放完的代码

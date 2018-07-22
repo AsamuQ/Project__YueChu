@@ -32,7 +32,6 @@
         <activity android:name=".page_yuechu.phbActivity" />
         <activity android:name=".page_yuechu.xsActivity" />
         <activity android:name=".page_yuechu.scActivity" />
-        <activity android:name=".page_yuechu.sc1Activity" />
         <activity android:name=".page_yuechu.sc2Activity" />
         <activity android:name=".page_yuechu.sc3Activity" />
         <activity android:name=".page_yuechu.phb1Activity" />

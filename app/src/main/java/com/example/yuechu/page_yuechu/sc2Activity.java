@@ -38,10 +38,6 @@ public class sc2Activity extends Activity {
             }
         });
 
-        //本地的视频  需要在手机SD卡根目录添加一个视频
-        String videoUrl1 = Environment.getExternalStorageDirectory().getPath() + "/sdcard/ms.mp4";//不知道哪错了
-
-
         //网络视频
         String videoUrl2 = Utils.videoUrl;
 
