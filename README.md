@@ -13,8 +13,10 @@
     ┠--  login        // 登录
     ┠--  reigster     // 注册
     ┠--  Page_index   // 首页
+    ┠--  page_my      // "个人中心"模块
     ┠--  page_search  // "搜索"模块
     ┠--  page_yuechu  // "约厨"模块
+
 
 ```
 
