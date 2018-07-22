@@ -94,6 +94,7 @@ public class LoginActivity extends Activity {
             editor.apply();
 
             Intent intent = new Intent(getApplicationContext(),IndexActivity.class);
+            intent.putExtra("username",username);
             startActivity(intent);
             finish();
         }

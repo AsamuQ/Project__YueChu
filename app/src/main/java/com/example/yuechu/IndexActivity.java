@@ -72,6 +72,7 @@ public class IndexActivity extends Activity implements RadioGroup.OnCheckedChang
                 if(fg4 == null){
                     fg4 = new FourthFragment();
                     fg4.setContext(getApplicationContext());
+                    fg4.setUsername(getIntent().getExtras().getString("username"));
                     fTransaction.add(R.id.ly_content,fg4);
                 }else{
                     fTransaction.show(fg4);
